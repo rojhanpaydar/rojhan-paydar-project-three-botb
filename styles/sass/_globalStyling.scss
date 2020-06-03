@@ -1,0 +1,26 @@
+//styles of index.html
+
+.flexContainer {
+    display: flex; 
+    min-height: 100%;
+    flex-direction: column; 
+}
+
+.row {
+    border: 1px solid blue;
+    display: flex;
+    flex: 1;
+}
+
+.character {
+    height: 300px;
+    width: 28%; 
+    border: 2px solid red;
+    flex: 1; 
+        img {
+            max-width: 200px; 
+        }
+}
+
+
+

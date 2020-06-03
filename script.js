@@ -49,7 +49,11 @@ babyPatrick = {
     home: "Bikini Bottom"
 }
 
-// → After character selection, the user views “fight mode” (similar to old school 1 vs 1 arcade mode).The users opponent will be randomly selected from an array of villains
+
+
+
+
+// → After character selection, the user views “fight mode” (similar to old school 1 vs 1 arcade mode).The users opponent will be randomly selected from an array of opponents 
 
 
 

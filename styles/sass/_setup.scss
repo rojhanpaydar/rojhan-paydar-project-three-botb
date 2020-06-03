@@ -22,3 +22,17 @@ p {
   margin: 0;
   padding: 0;
 }
+
+img {
+  max-width: 100%; 
+  display: block;
+}
+
+.wrapper {
+  max-width: 1280px; 
+}
+
+
+* {
+  border: 1px solid red; 
+}
