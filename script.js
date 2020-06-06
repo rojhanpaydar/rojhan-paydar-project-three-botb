@@ -1,69 +1,117 @@
-$(document).ready(function(){
-    console.log('ready')
-    event.preventDefault();
-    
+
     // → User is sent to a menu to select “character” displayed on a six grid menu(with some CSS styling, hover effects with mouse, and more)
+    
+    
+    // cache variables for the DOM (r p s video recommendation) DO NOT DELETE!!!! vvvvvvvvvvvvvvvvvvvvvvv
+    // const userScore = "0";
+    // const computerScore = "0"; 
+    
+    
+    // → Each “character” is stored in an object. Each object will hold information containing their name and their image
+
+    let chosenCharacter;
+
+    
+    const characters = [
+    
+        {
+            identifier: 'babyYoda',
+            name: 'Baby Yoda',
+            age: '?????',
+            home: '?????',
+            url: 'assets/baby_yoda_icon.jpg',
+            select: 'SELECT',
+            
+        },            
+        {
+            identifier:'babySpongeBob',
+            name: 'Baby SpongeBob',
+            age: 'Two Years Old',
+            home: 'Bikini Bottom',
+            url: 'assets/baby_spongebob.jpg',
+            select: 'SELECT',
+        },
+        {
+            identifier: 'babyGroot',
+            name: 'Baby Groot',
+            age: 'Two Years Old',
+            home: 'Planet X',
+            url: 'assets/baby_groot_icon.jpg',
+            select: 'SELECT',
+        },
+
+    ]  
+    
+$(function(){
+
+    const characterSelectArray = characters.filter((character) => {
+        return character.url && character.name;
+    }) 
+
+    const displayCharacters = (characters) => {
+
+
+
+        for (let i = 0; i < characters.length; i++) {
+            const characterContainer = $('<li>').addClass(characters[i].identifier);
+            const characterName = $('<h2>').text(characters[i].name);
+            const characterImage = $('<img>').attr('src', characters[i].url);
+            const characterSelect = $('<button>').text(characters[i].select).attr('value', i);
+
+            characterContainer.append(characterName, characterImage, characterSelect);
+
+            $('.characters').append(characterContainer);
+
+        }
+
+
+    }
+
+    displayCharacters(characterSelectArray); 
+        
+
+    $('button').on('click', function(event){
+        event.preventDefault(); 
+        const buttonIndex = this.value;
+
+        for (let info in characters[buttonIndex]) {
+            console.log(info);
+        }   
+       
+
+        $('.characterStats').html(`
+            <img src = "${characters[buttonIndex].url}"/>
+            <p>Name: ${characters[buttonIndex].name}</p>
+            <p>Age: ${characters[buttonIndex].age}</p>
+            <p>Home: ${characters[buttonIndex].home}</p>
+            <button>SELECT THIS CHARACTER</button>
+            <button>BACK TO MAIN MENU </button> 
+
+        
+        `)
+
+    });
+
+
+
+        // on select this character:
+                // mainMenuSection to hide 
+                // display battle mode 
+
+        // $('.characterSelect').addClass('hidden')
+        // $('.battleMode').removeClass('hidden')
+
+                // create characterChoice variable <- store index 
+                // characterChoice info loaded into battle mode
+                // create a random index 
+                // store random index in varaible (compChoice)
+                // load compChoice info 
+                //append button onto page (for fighting)
+            
+        
+        // event listener to fight button: 
+                // use if else statements ==> i.e. if name = baby yoda & name = spongebob then spongebob wins
+                // once theres a winner, the results will appear on the page 
+                // append one button (main menu)
+                
 });
-
-// cache variables for the DOM (r p s video recommendation)
-const userScore = "0";
-const computerScore = "0"; 
-
-
-// → Each “character” is stored in an object. Each object will hold information containing their name and their image
-
-babyYoda = {
-    name: "Baby Yoda",
-    age: "?????",
-    home: "?????"
-
-};
-
-babyGroot = {
-    name: "Baby Groot",
-    age: "Two Years Old",
-    home: "Planet X"
-};
-
-babyJackJack = {
-    name: "Baby Jack Jack",
-    age: "One Years Old",
-    home: "Metroville"
-}
-
-babyMario = {
-    name: "Baby Mario",
-    age: "Three Years Old",
-    home: "Yoshi's Island"
-}
-
-babySpongeBob = {
-    name: "Baby SpongeBob",
-    age: "Two Years Old",
-    home: "Bikini Bottom"
-}
-
-babyPatrick = {
-    name: "Baby Patrick",
-    age: "Two Years Old",
-    home: "Bikini Bottom"
-}
-
-
-
-
-
-// → After character selection, the user views “fight mode” (similar to old school 1 vs 1 arcade mode).The users opponent will be randomly selected from an array of opponents 
-
-
-
-
-
-
-
-// Pseudo Code:
-
-// →  When user is ready for the round, they will click “START FIGHT” button
-// → This button click triggers a function to determine the logic of who will win
-// → This logic will be a random selection of either “win”, “lose”, or “tie”
-// → A screen will appear saying “you lose” or “you win” or “tie” with an option to return to the main menu page and select a new character! 
