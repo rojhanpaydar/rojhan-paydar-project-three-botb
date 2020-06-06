@@ -47,16 +47,13 @@ h2{
 
 .characterStats {
     display: block; 
+    width: 70%; 
+    margin: 0 auto; 
+    // padding: 10%; 
 }
 
 section {
     height: 100vh;
-}
-
-.bg1 {
-    background-image: url(../assets/fire_wall_start_screen.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
 }
 
 //BATTLE OF THE BABIES FIGHT MODE
@@ -71,4 +68,18 @@ section {
 
 .btn {
    width: 500px;  
+}
+
+.displayUser {
+  width: 200px; 
+  position: absolute; 
+  bottom: 10%;
+  right: 65%;
+}
+
+.displayCpu {
+  width: 200px; 
+  position: absolute; 
+  right: 20%;
+  bottom: 12%;
 }
