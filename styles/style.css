@@ -342,3 +342,11 @@ section {
 .hidden {
   display: none;
 }
+
+.appear {
+  display: inline;
+}
+
+.btn {
+  width: 500px;
+}

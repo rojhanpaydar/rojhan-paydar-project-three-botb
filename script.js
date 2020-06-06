@@ -2,11 +2,6 @@
     // → User is sent to a menu to select “character” displayed on a six grid menu(with some CSS styling, hover effects with mouse, and more)
     
     
-    // cache variables for the DOM (r p s video recommendation) DO NOT DELETE!!!! vvvvvvvvvvvvvvvvvvvvvvv
-    // const userScore = "0";
-    // const computerScore = "0"; 
-    
-    
     // → Each “character” is stored in an object. Each object will hold information containing their name and their image
 
     let chosenCharacter;
@@ -75,7 +70,7 @@ $(function(){
         const buttonIndex = this.value;
 
         for (let info in characters[buttonIndex]) {
-            console.log(info);
+
         }   
        
 
@@ -84,13 +79,30 @@ $(function(){
             <p>Name: ${characters[buttonIndex].name}</p>
             <p>Age: ${characters[buttonIndex].age}</p>
             <p>Home: ${characters[buttonIndex].home}</p>
-            <button>SELECT THIS CHARACTER</button>
-            <button>BACK TO MAIN MENU </button> 
-
-        
+                <button class="chosen">SELECT THIS CHARACTER</button>
+                <button>BACK TO MAIN MENU </button>
         `)
+        
+        $('button').click(function () {
+                $('.characterStats').toggle(); 
+                
+                
+                
+            }); 
+            
+            $('.chosen').click(function () {
+                $(this).data('clicked', true)
+                $('.characterSelect').hide();
+                $('.battleMode').removeClass('hidden')
+        });
 
+    
     });
+
+
+});
+
+
 
 
 
@@ -113,5 +125,3 @@ $(function(){
                 // use if else statements ==> i.e. if name = baby yoda & name = spongebob then spongebob wins
                 // once theres a winner, the results will appear on the page 
                 // append one button (main menu)
-                
-});
