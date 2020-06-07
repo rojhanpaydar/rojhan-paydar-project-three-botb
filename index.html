@@ -4,17 +4,28 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet"> 
+    <script src="https://kit.fontawesome.com/3212c86140.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="styles/style.css" type="text/css">
     <title>Battle of the Babies</title>
 </head>
 <body>
-
+    <button id="volumeToggle" class="volumeToggle">
+        <p>soundtrack</p>
+        <i class="far fa-play-circle"></i>
+        <i class="fas fa-volume-mute"></i>
+    </button>
+<!-- first section of site -->
 <section class="startTitleScreen">
+    <button id="volumeToggle">hello</button>
 <h1>BATTLE OF THE BABIES</h1>
 
-<button class="start"><blink>START</blink></button>
-</section>
+<button id="startButton" class="start"><blink>START</blink></button>
+    <audio id="music" loop>
+        <source src="Rojhan Music/00 Rojhan_BabyBattleMusic_shortvers.mp3" type="audio/mpeg">
+    </audio>
 
+</section>
+<!-- second section of site -->
 <section id="mainMenuHidden" class="characterSelect wrapper hidden">
     <h2>SELECT YOUR FIGHTER</h2>
     <ul class="characters">
@@ -23,12 +34,11 @@
     <div class="characterStats">
     
     </div>
-
 </section>
-
+<!-- third section of site -->
 <section class="battleMode hidden">
     <button class="startFight">START FIGHT</button>
-    
+    <p class="coin"><blink>INSERT COIN</blink></p>
     <div class="displayUser">
 
     </div>
@@ -36,10 +46,8 @@
         
     </div>
 
-
 </section>
-
-
+<!-- input footer? for credits! -->
 <script src='https://code.jquery.com/jquery-3.4.0.min.js' integrity='sha256-BJeo0qm959uMBGb65z40ejJYGSgR7REI4+CW1fNKwOg=' crossorigin='anonymous'></script>
 <script src="script.js"></script>
 

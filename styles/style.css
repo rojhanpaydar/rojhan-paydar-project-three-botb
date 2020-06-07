@@ -263,7 +263,17 @@ img {
 .wrapper {
   max-width: 1280px;
   margin: 0 auto;
-  width: 70%;
+  width: 80%;
+}
+
+audio {
+  width: 8%;
+  margin: 0 auto;
+}
+
+.volumeToggle {
+  position: absolute;
+  color: #ff0000;
 }
 
 ul {
@@ -283,7 +293,6 @@ img {
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  max-width: 900px;
   margin: 0 auto;
 }
 
@@ -292,7 +301,7 @@ li {
       -ms-flex: 1 0 250px;
           flex: 1 0 250px;
   position: relative;
-  border: 3px solid black;
+  border: 3px solid #000000;
   margin: 10px;
   padding: 10px;
 }
@@ -305,7 +314,6 @@ h2 {
   position: absolute;
   bottom: 0;
   right: -10px;
-  background: red;
   color: white;
   width: 70px;
   height: 70px;
@@ -323,11 +331,11 @@ h2 {
 
 .characterStats {
   display: block;
-  width: 70%;
+  width: 80%;
   margin: 0 auto;
   position: absolute;
-  top: 0;
-  background-color: white;
+  top: 30%;
+  background-color: #ffffff;
 }
 
 .characterStats img {
@@ -340,7 +348,7 @@ section {
 
 li:hover,
 button:focus {
-  border: 5px solid green;
+  border: 5px solid #008000;
 }
 
 button:hover,
@@ -399,8 +407,8 @@ h1 {
   font-size: 70px;
   font-family: 'Press Start 2P', cursive;
   text-align: center;
-  color: #fff;
-  margin: 5% 0 5% 0;
+  color: #ffffff;
+  margin: 5% 0 3% 0;
 }
 
 h2 {
@@ -408,16 +416,21 @@ h2 {
   font-family: 'Press Start 2P', cursive;
   text-align: center;
   margin-top: 5%;
-  color: black;
+  color: #000000;
 }
 
 h3 {
-  font-size: 20px;
+  font-size: 18px;
   font-family: 'Press Start 2P', cursive;
 }
 
 .startFight {
-  color: white;
+  color: #000000;
+  background-color: #ffe134;
+  position: absolute;
+  padding: 1%;
+  bottom: 5%;
+  left: 40%;
 }
 
 blink {
@@ -425,15 +438,15 @@ blink {
   animation: blink 0.8s linear infinite;
   font-size: 50px;
   font-family: 'Press Start 2P', cursive;
-  color: white;
+  color: #ffffff;
 }
 
 blink:hover {
-  color: green;
+  color: #008000;
 }
 
 blink:focus {
-  border: 2px dotted #fff;
+  border: 2px dotted #ffffff;
 }
 
 button {
@@ -492,4 +505,14 @@ p {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  color: white;
+}
+
+.startTitleScreen p {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }

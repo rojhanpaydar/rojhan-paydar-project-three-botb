@@ -1,3 +1,13 @@
+// colour for hover
+$hoverColor: #008000;  
+// colour for title screen and battle mode 
+$titleAndBattleColor: #ffffff; 
+// colour for character selection menu 
+$characterMenuColor: #000000; 
+// button bg colour 
+$buttonBackground: #ffe134;
+
+
 // font-family: 'Press Start 2P', cursive;
 
 @mixin fontSize($sizeValue) {
@@ -9,23 +19,28 @@
 h1 {
     @include fontSize(70);
     text-align: center;
-    color: #fff;  
-    margin: 5% 0 5% 0;
+    color: $titleAndBattleColor;  
+    margin: 5% 0 3% 0;
 }
 
 h2 {
     @include fontSize(70);
     text-align: center;
     margin-top: 5%; 
-    color: black;
+    color: $characterMenuColor; 
 }
 
 h3 {
-    @include fontSize(20); 
+    @include fontSize(18); 
 }
 
 .startFight {
-    color: white;
+    color: $characterMenuColor;
+    background-color: $buttonBackground; 
+    position: absolute;
+    padding: 1%; 
+    bottom: 5%; 
+    left: 40%; 
 }
 
 blink {
@@ -33,14 +48,15 @@ blink {
     -moz-animation:blink 0.8s linear infinite;
     animation: blink 0.8s linear infinite; 
      @include fontSize(50);
-     color: white; 
+     color: $titleAndBattleColor; 
 }
 
 blink:hover{
-    color: green; 
+    color: $hoverColor; 
 }
+
 blink:focus {
-    border: 2px dotted #fff; 
+    border: 2px dotted $titleAndBattleColor;  
 }
 
 button {

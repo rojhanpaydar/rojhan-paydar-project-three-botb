@@ -1,14 +1,18 @@
 // → User is sent to a menu to select "character" displayed on a six grid menu(with some CSS styling, hover effects with mouse, and more)
 // → Each "character" is stored in an object. Each object will hold information containing their name and their image
 let userChoice;
+let cpuChoice; 
+let audioClicked = false; 
+
+
 const characters = [
-    {
+        {
         identifier: 'babyYoda',
         name: 'Baby Yoda',
         gif: 'assets/baby_yoda_stats.gif',
         age: '?????',
         home: '?????',
-        url: 'assets/baby_yoda_icon.jpg',
+        url: 'assets/baby_yoda_icon_4.png',
         left: 'assets/baby_yoda_facing_left.png',
         right: 'assets/baby_yoda_facing_right.png',
         select: 'SELECT',
@@ -19,7 +23,7 @@ const characters = [
         gif: 'assets/baby_spongebob_stats.gif',
         age: 'Two Years Old',
         home: 'Bikini Bottom',
-        url: 'assets/baby_spongebob.jpg',
+        url: 'assets/baby_spongebob.png',
         left: 'assets/baby_spongebob_facing_left.png',
         right: 'assets/baby_sponegbob_facing_right.png',
         select: 'SELECT',
@@ -30,14 +34,27 @@ const characters = [
         gif: 'assets/baby_groot_stats.gif',
         age: 'Two Years Old',
         home: 'Planet X',
-        url: 'assets/baby_groot_icon.jpg',
+        url: 'assets/baby_groot_new_icon.png',
         left: 'assets/baby_groot_facing_left.png',
         right: 'assets/baby_groot_facing_right.png',
         select: 'SELECT',
     },
 ];
+// music player
+    $('#volumeToggle').on('click', function(){
+        if (audioClicked === false) {
+            $('audio')[0].play();
+        } else {
+            $('audio')[0].muted = !$('audio')[0].muted; 
+        }
+        $('audio')[0].volume = 0.1;
+        $('audio')[0].paused = false;
 
-$('.start').click(function () {
+        console.log($('audio')[0]);
+        audioClicked = true; 
+    })
+
+$('#startButton').click(function () {
     $('.startTitleScreen').hide();
     $('.characterSelect').removeClass('hidden');
 });
@@ -49,17 +66,18 @@ const displayCharacters = (characters) => {
         const characterContainer = $('<li>').addClass(characters[i].identifier);
         const characterName = $('<h3>').text(characters[i].name);
         const characterImage = $('<img>').attr('src', characters[i].url);
-        const characterSelect = $('<button>').text(characters[i].select).attr('value', i);
+        const characterSelect = $('<button class="selection">').text(characters[i].select).attr('value', i);
         characterContainer.append(characterName, characterImage, characterSelect);
         $('.characters').append(characterContainer);
     }
 }
 const displayChosenCharacter = () => {
-    $('button').on('click', function (event) {
+    $('.selection').on('click', function (event) {
         event.preventDefault();
         const buttonIndex = this.value;
-        let userChoice = characters[buttonIndex];
-        let cpuChoice = generateCPUCharact(characters);
+        // console.log(this);
+        userChoice = characters[buttonIndex];
+        cpuChoice = generateCPUCharact();
 
         $('.characterStats').html(`
                 <img src = "${userChoice.gif}"/>
@@ -78,34 +96,76 @@ const displayChosenCharacter = () => {
             // hide character selection menu 
             $('.battleMode').removeClass('hidden');
             // display battle mode 
-            // const userChoice = documents.getElementById(characters[i].identifier);
             // create user choice of character variable <- store index 
-            // console.log(userChoice);
             // characterChoice info loaded into battle mode
         });
         $('.displayUser').html(`
             <img src="${userChoice.right}">
-        `);
+        `); 
         $('.displayCpu').html(`
             <img src="${cpuChoice.left}">
         `)
     });
 }
-const generateCPUCharact = (characterSelect) => {
+const generateCPUCharact = () => {
     let cpuIndex = Math.floor(Math.random() * (2 - 0 + 1));
-    let cpuCharacter = characters[cpuIndex];
-    return cpuCharacter;
+    let cpuChoice = characters[cpuIndex];
+    // console.log(cpuChoice);
+    return cpuChoice;
 }
 const startBattle = (userChoice) => {
     $('.displayUser').html()
     console.log(userChoice);
 }
 
+let babyYoda = characters[0]
+let babySpongeBob = characters[1]
+let babyGroot = characters[2]
+
     $('.startFight').on('click', function(){
-        if (userChoice ===  characters[0] ){
-            console.log('you win!');
-        } 
+        console.log(userChoice, cpuChoice); 
+        if (userChoice ===  babyYoda){
+            if (cpuChoice === babySpongeBob) {
+                gameOver('win');
+            } else if (cpuChoice === babyYoda) {
+                gameOver('tie');
+            } else {
+                gameOver('lose');
+            }
+        } else if (userChoice === babySpongeBob){
+            if (cpuChoice === babySpongeBob) {
+                gameOver('tie');
+            } else if (cpuChoice === babyYoda) {
+                gameOver('lose');
+            } else {
+                gameOver('win');
+            }
+
+        } else if (userChoice === babyGroot) {
+            if (cpuChoice === babyGroot) {
+                gameOver('tie');
+            } else if (cpuChoice === babyYoda) {
+                gameOver('lose');
+            } else {
+                gameOver('win');
+            }
+            
+        }
     })
+    
+    let gameOver = function(results){
+        alert(`You ${results}`)
+        location.reload();
+      }
+
+    
+    const init = () => {
+        displayCharacters(characters);
+        userChoice = displayChosenCharacter()
+        console.log(userChoice);
+        startBattle(userChoice);
+    }
+    $(document).ready(init());
 
 
 // create a random index 
@@ -128,10 +188,3 @@ const startBattle = (userChoice) => {
 // } else if (userInput === "scissors" || userInput === "Scissors") {
 //     console.log("You lose!")
 // }
-const init = () => {
-    displayCharacters(characters);
-    userChoice = displayChosenCharacter()
-    console.log(userChoice);
-    startBattle(userChoice);
-}
-$(document).ready(init());
