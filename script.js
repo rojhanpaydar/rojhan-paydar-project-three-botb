@@ -9,8 +9,8 @@ const characters = [
         age: '?????',
         home: '?????',
         url: 'assets/baby_yoda_icon.jpg',
-        left: 'assets/baby_yoda_facing_left.jpg',
-        right: 'assets/baby_yoda_facing_right.jpg',
+        left: 'assets/baby_yoda_facing_left.png',
+        right: 'assets/baby_yoda_facing_right.png',
         select: 'SELECT',
     },
     {
@@ -20,8 +20,8 @@ const characters = [
         age: 'Two Years Old',
         home: 'Bikini Bottom',
         url: 'assets/baby_spongebob.jpg',
-        left: 'assets/baby_spongebob_facing_left.jpg',
-        right: 'assets/baby_sponegbob_facing_right.jpg',
+        left: 'assets/baby_spongebob_facing_left.png',
+        right: 'assets/baby_sponegbob_facing_right.png',
         select: 'SELECT',
     },
     {
@@ -31,16 +31,23 @@ const characters = [
         age: 'Two Years Old',
         home: 'Planet X',
         url: 'assets/baby_groot_icon.jpg',
-        left: 'assets/baby_groot_facing_left.jpg',
-        right: 'assets/baby_groot_facing_right.jpg',
+        left: 'assets/baby_groot_facing_left.png',
+        right: 'assets/baby_groot_facing_right.png',
         select: 'SELECT',
     },
 ];
+
+$('.start').click(function () {
+    $('.startTitleScreen').hide();
+    $('.characterSelect').removeClass('hidden');
+});
+
+
 const displayCharacters = (characters) => {
     // console.log(characters);
     for (let i = 0; i < characters.length; i++) {
         const characterContainer = $('<li>').addClass(characters[i].identifier);
-        const characterName = $('<h2>').text(characters[i].name);
+        const characterName = $('<h3>').text(characters[i].name);
         const characterImage = $('<img>').attr('src', characters[i].url);
         const characterSelect = $('<button>').text(characters[i].select).attr('value', i);
         characterContainer.append(characterName, characterImage, characterSelect);
@@ -53,7 +60,7 @@ const displayChosenCharacter = () => {
         const buttonIndex = this.value;
         let userChoice = characters[buttonIndex];
         let cpuChoice = generateCPUCharact(characters);
-        // console.log(userChoice);
+
         $('.characterStats').html(`
                 <img src = "${userChoice.gif}"/>
                 <p>Name: ${userChoice.name}</p>
@@ -93,6 +100,12 @@ const startBattle = (userChoice) => {
     $('.displayUser').html()
     console.log(userChoice);
 }
+
+    $('.startFight').on('click', function(){
+        if (userChoice ===  characters[0] ){
+            console.log('you win!');
+        } 
+    })
 
 
 // create a random index 

@@ -4,3 +4,69 @@
     font-size: $sizeValue * 1px;
     font-family: 'Press Start 2P', cursive;
 }
+
+//menu selection title
+h1 {
+    @include fontSize(70);
+    text-align: center;
+    color: #fff;  
+    margin: 5% 0 5% 0;
+}
+
+h2 {
+    @include fontSize(70);
+    text-align: center;
+    margin-top: 5%; 
+    color: black;
+}
+
+h3 {
+    @include fontSize(20); 
+}
+
+.startFight {
+    color: white;
+}
+
+blink {
+    -webkit-animation:blink 0.8s linear infinite;
+    -moz-animation:blink 0.8s linear infinite;
+    animation: blink 0.8s linear infinite; 
+     @include fontSize(50);
+     color: white; 
+}
+
+blink:hover{
+    color: green; 
+}
+blink:focus {
+    border: 2px dotted #fff; 
+}
+
+button {
+    background: none; 
+    border: none; 
+    @include fontSize(20);
+}
+
+p {
+    @include fontSize(15);
+}
+
+@-webkit-keyframes blink {
+    0%{opacity:1;}
+    50%{opacity:0;}
+    100%{opacity:1;}
+}
+
+@-moz-keyframes blink {
+    0%{opacity:1;}
+    50%{opacity:0;}
+    100%{opacity:1;}
+}
+
+@keyframes blink {
+    0%{opacity:1;}
+    50%{opacity:0;}
+    100%{opacity:1;}
+}

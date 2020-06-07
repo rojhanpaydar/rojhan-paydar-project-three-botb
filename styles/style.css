@@ -263,7 +263,7 @@ img {
 .wrapper {
   max-width: 1280px;
   margin: 0 auto;
-  width: 60%;
+  width: 70%;
 }
 
 ul {
@@ -325,10 +325,48 @@ h2 {
   display: block;
   width: 70%;
   margin: 0 auto;
+  position: absolute;
+  top: 0;
+  background-color: white;
+}
+
+.characterStats img {
+  width: 80%;
 }
 
 section {
   height: 100vh;
+}
+
+li:hover,
+button:focus {
+  border: 5px solid green;
+}
+
+button:hover,
+button:focus {
+  cursor: pointer;
+}
+
+li {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+li img {
+  padding-top: 10%;
+  padding-bottom: 10%;
 }
 
 .hidden {
@@ -357,9 +395,101 @@ section {
   bottom: 12%;
 }
 
+h1 {
+  font-size: 70px;
+  font-family: 'Press Start 2P', cursive;
+  text-align: center;
+  color: #fff;
+  margin: 5% 0 5% 0;
+}
+
+h2 {
+  font-size: 70px;
+  font-family: 'Press Start 2P', cursive;
+  text-align: center;
+  margin-top: 5%;
+  color: black;
+}
+
+h3 {
+  font-size: 20px;
+  font-family: 'Press Start 2P', cursive;
+}
+
+.startFight {
+  color: white;
+}
+
+blink {
+  -webkit-animation: blink 0.8s linear infinite;
+  animation: blink 0.8s linear infinite;
+  font-size: 50px;
+  font-family: 'Press Start 2P', cursive;
+  color: white;
+}
+
+blink:hover {
+  color: green;
+}
+
+blink:focus {
+  border: 2px dotted #fff;
+}
+
+button {
+  background: none;
+  border: none;
+  font-size: 20px;
+  font-family: 'Press Start 2P', cursive;
+}
+
+p {
+  font-size: 15px;
+  font-family: 'Press Start 2P', cursive;
+}
+
+@-webkit-keyframes blink {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes blink {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
 .battleMode {
   background-image: url(../assets/nYuVFMI.gif);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
+}
+
+.startTitleScreen {
+  background-color: black;
+  background-image: url(../assets/fire_start.gif);
+  background-repeat: repeat-x;
+  background-size: contain;
+  background-position: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
