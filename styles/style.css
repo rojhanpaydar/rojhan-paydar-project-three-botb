@@ -310,36 +310,39 @@ h2 {
   text-align: center;
 }
 
-.characters p {
-  position: absolute;
-  bottom: 0;
-  right: -10px;
-  color: white;
-  width: 70px;
-  height: 70px;
-  border-radius: 50%;
+.flexContainer {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .characterStats {
   display: block;
-  width: 80%;
+  width: 550px;
   margin: 0 auto;
   position: absolute;
-  top: 30%;
+  top: 25%;
   background-color: #ffffff;
+  text-align: center;
 }
 
 .characterStats img {
   width: 80%;
+  margin: 0 auto;
+}
+
+.characterStats p {
+  padding-top: 2%;
 }
 
 section {
@@ -403,6 +406,21 @@ li img {
   bottom: 12%;
 }
 
+.coin {
+  position: absolute;
+  right: 0;
+}
+
+progress {
+  width: 500px;
+  padding: 5%;
+}
+
+.left {
+  position: absolute;
+  right: 0;
+}
+
 h1 {
   font-size: 70px;
   font-family: 'Press Start 2P', cursive;
@@ -412,10 +430,9 @@ h1 {
 }
 
 h2 {
-  font-size: 70px;
+  font-size: 60px;
   font-family: 'Press Start 2P', cursive;
   text-align: center;
-  margin-top: 5%;
   color: #000000;
 }
 
@@ -486,7 +503,6 @@ p {
 }
 
 .battleMode {
-  background-image: url(../assets/nYuVFMI.gif);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;

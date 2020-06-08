@@ -4,11 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet"> 
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
     <script src="https://kit.fontawesome.com/3212c86140.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="styles/style.css" type="text/css">
     <title>Battle of the Babies</title>
 </head>
 <body>
+    <!-- start button audio -->
     <button id="volumeToggle" class="volumeToggle">
         <p>soundtrack</p>
         <i class="far fa-play-circle"></i>
@@ -16,29 +18,42 @@
     </button>
 <!-- first section of site -->
 <section class="startTitleScreen">
-    <button id="volumeToggle">hello</button>
 <h1>BATTLE OF THE BABIES</h1>
+    <audio id="startAudio">
+        <source src="audio/start.wav" type="audio/mpeg">
+    </audio>
 
 <button id="startButton" class="start"><blink>START</blink></button>
     <audio id="music" loop>
-        <source src="Rojhan Music/botb_theme.mp3" type="audio/mpeg">
+        <!-- auto play in audio id area -->
+        <source src="audio/botb_theme.mp3" type="audio/mpeg">
     </audio>
 
 </section>
 <!-- second section of site -->
 <section id="mainMenuHidden" class="characterSelect wrapper hidden">
     <h2>SELECT YOUR FIGHTER</h2>
+    <audio id="menuSelectAudio">
+        <source src="audio/LIHover.mp3" type="audio/mpeg"></source>  
+    </audio>
     <ul class="characters">
 
     </ul>
-    <div class="characterStats">
-    
-    </div>
-</section>
+        <div class="flexContainer">
+            <div class="characterStats">
+            </div>
+        </div>
+    </section>
 <!-- third section of site -->
-<section class="battleMode hidden">
+<section id="battleMode" class="battleMode hidden">
+    <!-- health bar -->
+    <progress id="health" value="100" max="100"></progress>
+    <progress class ="left" id="cpuHealth" value="100" max="100"></progress>
+
     <button class="startFight">START FIGHT</button>
+
     <p class="coin"><blink>INSERT COIN</blink></p>
+    
     <div class="displayUser">
 
     </div>

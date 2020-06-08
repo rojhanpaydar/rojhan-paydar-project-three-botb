@@ -16,6 +16,8 @@ const characters = [
         left: 'assets/baby_yoda_facing_left.png',
         right: 'assets/baby_yoda_facing_right.png',
         select: 'SELECT',
+        win: 'assets/baby_yoda_you_win.gif',
+        lose: 'assets/baby_yoda_you_lose.gif',
     },
     {
         identifier: 'babySpongeBob',
@@ -47,35 +49,51 @@ const characters = [
         } else {
             $('audio')[0].muted = !$('audio')[0].muted; 
         }
-        $('audio')[0].volume = 0.1;
+        $('audio')[0].volume = 0.3;
         $('audio')[0].paused = false;
 
         console.log($('audio')[0]);
         audioClicked = true; 
     })
 
-$('#startButton').click(function () {
-    $('.startTitleScreen').hide();
-    $('.characterSelect').removeClass('hidden');
+    
+    $('#startButton').click(function () {
+        $('.startTitleScreen').fadeToggle("slow", "linear");
+        $('.characterSelect').removeClass('hidden');
+    });
+    
+    
+    const displayCharacters = (characters) => {
+        for (let i = 0; i < characters.length; i++) {
+            const characterContainer = $('<li>').addClass(characters[i].identifier);
+            const characterName = $('<h3>').text(characters[i].name);
+            const characterImage = $('<img>').attr('src', characters[i].url);
+            const characterSelect = $('<button class="selection">').text(characters[i].select).attr('value', i);
+            characterContainer.append(characterName, characterImage, characterSelect);
+            $('.characters').append(characterContainer);
+        }
+    }
+
+
+var startAudio = document.getElementById("startAudio");
+$(document).ready(function () {
+    $(".start").click(function () {
+        startAudio.play();
+    });
 });
 
+    // audio hover 
+var menuSelectAudio = document.getElementById("menuSelectAudio");
+$(document).ready(function () {
+    $("li").hover(function () {
+        menuSelectAudio.play();
+    });
+});
 
-const displayCharacters = (characters) => {
-    // console.log(characters);
-    for (let i = 0; i < characters.length; i++) {
-        const characterContainer = $('<li>').addClass(characters[i].identifier);
-        const characterName = $('<h3>').text(characters[i].name);
-        const characterImage = $('<img>').attr('src', characters[i].url);
-        const characterSelect = $('<button class="selection">').text(characters[i].select).attr('value', i);
-        characterContainer.append(characterName, characterImage, characterSelect);
-        $('.characters').append(characterContainer);
-    }
-}
 const displayChosenCharacter = () => {
     $('.selection').on('click', function (event) {
         event.preventDefault();
         const buttonIndex = this.value;
-        // console.log(this);
         userChoice = characters[buttonIndex];
         cpuChoice = generateCPUCharact();
 
@@ -85,14 +103,22 @@ const displayChosenCharacter = () => {
                 <p>Age: ${userChoice.age}</p>
                 <p>Home: ${userChoice.home}</p>
                 <button class="chosen">SELECT THIS CHARACTER</button>
-                <button>BACK TO MAIN MENU </button>
+                <button class="return">BACK TO MAIN MENU </button>
                 `)
+
         $('button').click(function () {
             $('.characterStats').toggle();
         });
+
+        $('.characters').toggle();
+
+        $('.return').click(function(){
+            $('.characters').show();
+        })
+
         // on select this character:
         $('.chosen').click(function () {
-            $('.characterSelect').hide();
+            $('.characterSelect').fadeToggle("slow", "linear");
             // hide character selection menu 
             $('.battleMode').removeClass('hidden');
             // display battle mode 
@@ -110,7 +136,6 @@ const displayChosenCharacter = () => {
 const generateCPUCharact = () => {
     let cpuIndex = Math.floor(Math.random() * (2 - 0 + 1));
     let cpuChoice = characters[cpuIndex];
-    // console.log(cpuChoice);
     return cpuChoice;
 }
 const startBattle = (userChoice) => {
@@ -123,30 +148,50 @@ let babySpongeBob = characters[1]
 let babyGroot = characters[2]
 
     $('.startFight').on('click', function(){
-        console.log(userChoice, cpuChoice); 
+        console.log(userChoice, cpuChoice);
+        let health = document.getElementById("health")
+        let cpuHealth = document.getElementById("cpuHealth")
         if (userChoice ===  babyYoda){
             if (cpuChoice === babySpongeBob) {
+                health.value -=0;
+                cpuHealth.value -= 100; 
                 gameOver('win');
             } else if (cpuChoice === babyYoda) {
+                health.value -=50;
+                cpuHealth.value -=50; 
                 gameOver('tie');
             } else {
+                health.value -= 100;
+                cpuHealth.value -= 0; 
                 gameOver('lose');
             }
         } else if (userChoice === babySpongeBob){
             if (cpuChoice === babySpongeBob) {
+                health.value -= 50;
+                cpuHealth.value -= 50;
                 gameOver('tie');
             } else if (cpuChoice === babyYoda) {
+                health.value -= 100;
+                cpuHealth.value -= 0; 
                 gameOver('lose');
             } else {
+                health.value -= 0;
+                cpuHealth.value -= 100; 
                 gameOver('win');
             }
 
         } else if (userChoice === babyGroot) {
             if (cpuChoice === babyGroot) {
+                health.value -= 50;
+                cpuHealth.value -= 50;
                 gameOver('tie');
             } else if (cpuChoice === babyYoda) {
+                health.value -= 100;
+                cpuHealth.value -= 0;
                 gameOver('lose');
             } else {
+                health.value -= 0;
+                cpuHealth.value -= 100;
                 gameOver('win');
             }
             
@@ -157,6 +202,11 @@ let babyGroot = characters[2]
         alert(`You ${results}`)
         location.reload();
       }
+
+$(function () {
+    images = ['nYuVFMI.gif', 'bg1.gif', 'bg2.gif', 'bg3.gif', 'bg4.gif','bg5.gif', 'bg6.gif', 'bg7.gif', 'bg8.gif', 'bg9.gif', 'bg10.gif', 'bg11.gif', 'bg12.gif', 'bg13.gif', 'bg14.gif', 'bg15.gif', 'bg16.gif', 'bg17.gif', 'bg18.gif', 'bg19.gif', 'bg20.gif',];
+    $('#battleMode').css({ 'background-image': 'url(assets/' + images[Math.floor(Math.random() * images.length)] + ')' });
+});
 
     
     const init = () => {
