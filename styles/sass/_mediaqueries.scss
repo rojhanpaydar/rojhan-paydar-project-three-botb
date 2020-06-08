@@ -3,17 +3,26 @@
 
 @media (max-width: 830px) {
 
-    h2 {
+    h1 {
         font-size: 50px; 
     }
+
+    h2 {
+        font-size: 40px; 
+    }
+
+    .characterStats {
+        width: 100%; 
+    }
+
 
 }
 
 @media (max-width: 470px) {
 
-    .characterStats {
-        width: 450px; 
-    }
+        button {
+            font-size: 15px; 
+        }
 
     .characterStats img {
         width: 50%;
@@ -24,16 +33,13 @@
         max-width: 100%; 
     }
     
-    progress {
-        width: 200px; 
-    }
 
-    .displayUser {
-        width: 150px; 
-    }
+    @media (max-width: 360px){
+        body {
+            max-width: 100%; 
+        }
 
-    .displayCpu {
-        width: 150px; 
+        
     }
 
 }

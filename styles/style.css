@@ -421,17 +421,17 @@ li img {
 }
 
 .displayUser {
-  width: 200px;
+  width: 20%;
   position: absolute;
   bottom: 10%;
   right: 65%;
 }
 
 .displayCpu {
-  width: 200px;
+  width: 20%;
   position: absolute;
-  right: 20%;
-  bottom: 12%;
+  right: 18%;
+  bottom: 10%;
 }
 
 .coin {
@@ -447,11 +447,6 @@ progress {
 .left {
   position: absolute;
   right: 0;
-}
-
-blink {
-  font-size: 30px;
-  margin: 0 auto;
 }
 
 h1 {
@@ -477,10 +472,12 @@ h3 {
 .startFight {
   color: #000000;
   background-color: #ffe134;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
   position: absolute;
-  padding: 1%;
-  bottom: 5%;
-  left: 40%;
+  bottom: 60%;
+  padding: 2%;
 }
 
 blink {
@@ -508,6 +505,11 @@ button {
 
 p {
   font-size: 15px;
+  font-family: 'Press Start 2P', cursive;
+}
+
+p blink {
+  font-size: 20px;
   font-family: 'Press Start 2P', cursive;
 }
 
@@ -567,14 +569,20 @@ p {
 }
 
 @media (max-width: 830px) {
-  h2 {
+  h1 {
     font-size: 50px;
+  }
+  h2 {
+    font-size: 40px;
+  }
+  .characterStats {
+    width: 100%;
   }
 }
 
 @media (max-width: 470px) {
-  .characterStats {
-    width: 450px;
+  button {
+    font-size: 15px;
   }
   .characterStats img {
     width: 50%;
@@ -583,13 +591,10 @@ p {
   .battleMode {
     max-width: 100%;
   }
-  progress {
-    width: 200px;
-  }
-  .displayUser {
-    width: 150px;
-  }
-  .displayCpu {
-    width: 150px;
+}
+
+@media (max-width: 470px) and (max-width: 360px) {
+  body {
+    max-width: 100%;
   }
 }

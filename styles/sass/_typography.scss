@@ -37,10 +37,10 @@ h3 {
 .startFight {
     color: $characterMenuColor;
     background-color: $buttonBackground; 
+    align-self: center; 
     position: absolute;
-    padding: 1%; 
-    bottom: 5%; 
-    left: 40%; 
+    bottom: 60%;
+    padding: 2%;
 }
 
 blink {
@@ -67,6 +67,10 @@ button {
 
 p {
     @include fontSize(15);
+}
+
+p blink {
+    @include fontSize(20); 
 }
 
 @-webkit-keyframes blink {

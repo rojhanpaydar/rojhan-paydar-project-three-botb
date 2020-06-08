@@ -129,17 +129,17 @@ li {
 }
 
 .displayUser {
-  width: 200px; 
+  width: 20%; 
   position: absolute; 
   bottom: 10%;
   right: 65%;
 }
 
 .displayCpu {
-  width: 200px; 
+  width: 20%; 
   position: absolute; 
-  right: 20%;
-  bottom: 12%;
+  right: 18%;
+  bottom: 10%;
 }
 
 .coin {
@@ -156,9 +156,4 @@ progress {
   position: absolute;
   right: 0;
 }
-
-blink {
-        font-size: 30px; 
-        margin: 0 auto; 
-    }
 

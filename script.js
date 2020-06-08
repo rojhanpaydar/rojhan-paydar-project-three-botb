@@ -50,7 +50,7 @@ $('#volumeToggle').on('click', function(){
         } else {
             themeMusic.muted = !themeMusic.muted; 
         }
-            themeMusic.volume = 0.3;
+            // themeMusic.volume = 0.3;
             themeMusic.paused = false;
 
         audioClicked = true; 
@@ -75,7 +75,7 @@ $('#volumeToggle').on('click', function(){
     }
 
 
-var startAudio = document.getElementById("startAudio");
+const startAudio = document.getElementById("startAudio");
 
 $(document).ready(function () {
     $(".start").click(function () {
@@ -84,7 +84,7 @@ $(document).ready(function () {
 });
 
     // audio hover 
-var menuSelectAudio = document.getElementById("menuSelectAudio");
+const menuSelectAudio = document.getElementById("menuSelectAudio");
 $(document).ready(function () {
     $("li").hover(function () {
         menuSelectAudio.play();
@@ -122,11 +122,22 @@ const displayChosenCharacter = () => {
         $('.chosen').click(function () {
             $('.characterSelect').fadeToggle("slow", "linear");
             // hide character selection menu 
+    
+            // add audio of entering battle mode
             $('.battleMode').removeClass('hidden');
             // display battle mode 
             // create user choice of character variable <- store index 
             // characterChoice info loaded into battle mode
         });
+
+        const enterBattleMusic = document.getElementById("enterBattleMusic");
+
+        $(document).ready(function () {
+            $(".chosen").click(function () {
+                enterBattleMusic.play();
+            });
+        });
+
         $('.displayUser').html(`
             <img src="${userChoice.right}">
         `); 
@@ -214,7 +225,6 @@ $(function () {
     const init = () => {
         displayCharacters(characters);
         userChoice = displayChosenCharacter()
-        // console.log(userChoice);
         startBattle(userChoice);
     }
     $(document).ready(init());
