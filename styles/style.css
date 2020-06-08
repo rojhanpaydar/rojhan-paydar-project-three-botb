@@ -274,6 +274,18 @@ audio {
 .volumeToggle {
   position: absolute;
   color: #ff0000;
+  top: 45%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  font-size: 30px;
 }
 
 ul {
@@ -324,6 +336,22 @@ h2 {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+.flexContainerBattle {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
 .characterStats {
@@ -412,13 +440,18 @@ li img {
 }
 
 progress {
-  width: 500px;
+  width: 35%;
   padding: 5%;
 }
 
 .left {
   position: absolute;
   right: 0;
+}
+
+blink {
+  font-size: 30px;
+  margin: 0 auto;
 }
 
 h1 {
@@ -531,4 +564,32 @@ p {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+}
+
+@media (max-width: 830px) {
+  h2 {
+    font-size: 50px;
+  }
+}
+
+@media (max-width: 470px) {
+  .characterStats {
+    width: 450px;
+  }
+  .characterStats img {
+    width: 50%;
+    padding-top: 20%;
+  }
+  .battleMode {
+    max-width: 100%;
+  }
+  progress {
+    width: 200px;
+  }
+  .displayUser {
+    width: 150px;
+  }
+  .displayCpu {
+    width: 150px;
+  }
 }

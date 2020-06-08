@@ -1,0 +1,40 @@
+// media queries go here 
+
+
+@media (max-width: 830px) {
+
+    h2 {
+        font-size: 50px; 
+    }
+
+}
+
+@media (max-width: 470px) {
+
+    .characterStats {
+        width: 450px; 
+    }
+
+    .characterStats img {
+        width: 50%;
+        padding-top: 20%;
+    }
+
+    .battleMode {
+        max-width: 100%; 
+    }
+    
+    progress {
+        width: 200px; 
+    }
+
+    .displayUser {
+        width: 150px; 
+    }
+
+    .displayCpu {
+        width: 150px; 
+    }
+
+}
+

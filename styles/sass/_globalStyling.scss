@@ -16,6 +16,11 @@ audio{
 .volumeToggle {
   position: absolute;
   color: $volumeButton;
+  top: 45%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  font-size: 30px; 
 }
 
 
@@ -54,6 +59,13 @@ h2 {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+
+.flexContainerBattle {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-direction: column;
 }
 
 .characterStats {
@@ -136,7 +148,7 @@ li {
 }
 
 progress {
-  width: 500px; 
+  width: 35%; 
   padding: 5%; 
 }
 
@@ -144,4 +156,9 @@ progress {
   position: absolute;
   right: 0;
 }
+
+blink {
+        font-size: 30px; 
+        margin: 0 auto; 
+    }
 

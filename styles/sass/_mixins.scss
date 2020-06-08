@@ -1,1 +1,5 @@
 // font mixins live here
+@mixin fontSize($sizeValue) {
+    font-size: $sizeValue * 1px;
+    font-family: 'Press Start 2P', cursive;
+}

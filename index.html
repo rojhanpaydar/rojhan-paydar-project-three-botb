@@ -12,7 +12,6 @@
 <body>
     <!-- start button audio -->
     <button id="volumeToggle" class="volumeToggle">
-        <p>soundtrack</p>
         <i class="far fa-play-circle"></i>
         <i class="fas fa-volume-mute"></i>
     </button>
@@ -24,7 +23,7 @@
     </audio>
 
 <button id="startButton" class="start"><blink>START</blink></button>
-    <audio id="music" loop>
+    <audio id="themeMusic" autoplay loop>
         <!-- auto play in audio id area -->
         <source src="audio/botb_theme.mp3" type="audio/mpeg">
     </audio>
@@ -47,18 +46,20 @@
 <!-- third section of site -->
 <section id="battleMode" class="battleMode hidden">
     <!-- health bar -->
-    <progress id="health" value="100" max="100"></progress>
-    <progress class ="left" id="cpuHealth" value="100" max="100"></progress>
+    <div class="flexContainerBattle">
+        <progress id="health" value="100" max="100"></progress>
+        <progress class ="left" id="cpuHealth" value="100" max="100"></progress>
 
-    <button class="startFight">START FIGHT</button>
+        <button class="startFight">START FIGHT</button>
 
-    <p class="coin"><blink>INSERT COIN</blink></p>
-    
-    <div class="displayUser">
-
-    </div>
-    <div class="displayCpu">
+        <p class="coin"><blink>INSERT COIN</blink></p>
         
+        <div class="displayUser">
+
+        </div>
+        <div class="displayCpu">
+            
+        </div>
     </div>
 
 </section>

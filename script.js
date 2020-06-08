@@ -27,7 +27,7 @@ const characters = [
         home: 'Bikini Bottom',
         url: 'assets/baby_spongebob.png',
         left: 'assets/baby_spongebob_facing_left.png',
-        right: 'assets/baby_sponegbob_facing_right.png',
+        right: 'assets/baby_spongebob_facing_right.png',
         select: 'SELECT',
     },
     {
@@ -43,16 +43,16 @@ const characters = [
     },
 ];
 // music player
-    $('#volumeToggle').on('click', function(){
-        if (audioClicked === false) {
-            $('audio')[0].play();
+$('#volumeToggle').on('click', function(){
+    const themeMusic = document.getElementById("themeMusic");
+    if (audioClicked === false) {
+            themeMusic.play();
         } else {
-            $('audio')[0].muted = !$('audio')[0].muted; 
+            themeMusic.muted = !themeMusic.muted; 
         }
-        $('audio')[0].volume = 0.3;
-        $('audio')[0].paused = false;
+            themeMusic.volume = 0.3;
+            themeMusic.paused = false;
 
-        console.log($('audio')[0]);
         audioClicked = true; 
     })
 
@@ -76,6 +76,7 @@ const characters = [
 
 
 var startAudio = document.getElementById("startAudio");
+
 $(document).ready(function () {
     $(".start").click(function () {
         startAudio.play();
@@ -102,15 +103,16 @@ const displayChosenCharacter = () => {
                 <p>Name: ${userChoice.name}</p>
                 <p>Age: ${userChoice.age}</p>
                 <p>Home: ${userChoice.home}</p>
-                <button class="chosen">SELECT THIS CHARACTER</button>
-                <button class="return">BACK TO MAIN MENU </button>
+                <button class="chosen hideStats">SELECT THIS CHARACTER</button>
+                <button class="return hideStats">BACK TO MAIN MENU </button>
                 `)
-
-        $('button').click(function () {
-            $('.characterStats').toggle();
+                 
+        $('.hideStats').on('click', function () {
+            $('.characterStats').hide();
         });
 
-        $('.characters').toggle();
+        $('.characters').hide();
+        $('.characterStats').show();
 
         $('.return').click(function(){
             $('.characters').show();
@@ -140,7 +142,6 @@ const generateCPUCharact = () => {
 }
 const startBattle = (userChoice) => {
     $('.displayUser').html()
-    console.log(userChoice);
 }
 
 let babyYoda = characters[0]
@@ -148,7 +149,7 @@ let babySpongeBob = characters[1]
 let babyGroot = characters[2]
 
     $('.startFight').on('click', function(){
-        console.log(userChoice, cpuChoice);
+        // console.log(userChoice, cpuChoice);
         let health = document.getElementById("health")
         let cpuHealth = document.getElementById("cpuHealth")
         if (userChoice ===  babyYoda){
@@ -197,6 +198,7 @@ let babyGroot = characters[2]
             
         }
     })
+
     
     let gameOver = function(results){
         alert(`You ${results}`)
@@ -212,7 +214,7 @@ $(function () {
     const init = () => {
         displayCharacters(characters);
         userChoice = displayChosenCharacter()
-        console.log(userChoice);
+        // console.log(userChoice);
         startBattle(userChoice);
     }
     $(document).ready(init());
@@ -226,15 +228,3 @@ $(function () {
 // use if else statements ==> i.e. if name = baby yoda & name = spongebob then spongebob wins
 // once theres a winner, the results will appear on the page 
 // append one button (main menu)
-
-
-
-// // 4. Create a simple "rock-paper-scissors" game. Prompt the user to enter their choice of "rock", "paper" or "scissors" and store this value in a variable. AAssume the computer always throws "rock" (we'll work on making this more dynamic later). If the user's input is "paper" then print to the console "You win!" If the input is "rock" then print "Tie!" and print "You lose!" if the user's input is "scissors". 
-// let userInput = prompt("Choose rock, paper, or scissors.")
-// if (userInput === "paper" || userInput === "Paper") {
-//     console.log("You win!")
-// } else if (userInput === "rock" || userInput === "Rock") {
-//     console.log("Tie!")
-// } else if (userInput === "scissors" || userInput === "Scissors") {
-//     console.log("You lose!")
-// }
