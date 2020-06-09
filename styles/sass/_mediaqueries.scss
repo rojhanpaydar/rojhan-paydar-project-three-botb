@@ -33,6 +33,20 @@
         max-width: 100%; 
     }
 
+    .creditsFlexContainer {
+        max-width: 100%; 
+            h1 {
+                font-size: 70%; 
+            }
+
+            li {
+                font-size: 60%; 
+            }
+                a {
+                    font-size: 60%; 
+                }
+    }
+
     .volumeToggle {
         top: 40%; 
     }

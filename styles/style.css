@@ -711,6 +711,18 @@ p blink {
   .battleMode {
     max-width: 100%;
   }
+  .creditsFlexContainer {
+    max-width: 100%;
+  }
+  .creditsFlexContainer h1 {
+    font-size: 70%;
+  }
+  .creditsFlexContainer li {
+    font-size: 60%;
+  }
+  .creditsFlexContainer a {
+    font-size: 60%;
+  }
   .volumeToggle {
     top: 40%;
   }
