@@ -715,13 +715,14 @@ p blink {
     max-width: 100%;
   }
   .creditsFlexContainer h1 {
-    font-size: 70%;
+    font-size: 50%;
   }
   .creditsFlexContainer li {
-    font-size: 60%;
+    font-size: 40%;
   }
   .creditsFlexContainer a {
-    font-size: 60%;
+    font-size: 50%;
+    text-align: center;
   }
   .volumeToggle {
     top: 40%;
