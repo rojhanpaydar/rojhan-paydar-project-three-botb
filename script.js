@@ -70,6 +70,20 @@ $(document).ready(function () {
         startAudio.play();
     });
 });
+
+// button for footer with credits toggles on and off throughout the app
+// unhides
+
+$('.hideFooterButton').on('click', function () {
+    $('footer').fadeToggle('footerHidden');
+    //hides
+        $('.hideAgain').on('click', function () {
+            $('footer').addClass('footerHidden');
+        });
+});
+
+
+
     
     // dynamically loops and displays character title, character image, and a "select" button. This is done by appending the li, h3, img, button to a <ul> with class of '.characters'. The for loops applies this for each character within the array, and pulls the information that matches the key within each individual object (aka character). 
     const displayCharacters = (characters) => {

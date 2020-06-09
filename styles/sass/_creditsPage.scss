@@ -1,0 +1,33 @@
+// styles for credits page goes here
+
+// colour for hover
+$hoverColor: #008000;  
+// colour for title screen and battle mode 
+$titleAndBattleColor: #ffffff; 
+// colour for character selection menu 
+$characterMenuColor: #000000; 
+// button bg colour 
+$buttonBackground: #ffe134;
+
+.creditsFlexContainer {
+    display: flex; 
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    @include fontSize(40);
+    color: $titleAndBattleColor;
+            ul {
+                font-size: 30%; 
+                    li {
+                        border-style: none;
+                    }
+                        li:hover {
+                            color:$characterMenuColor;
+                            background-color:$titleAndBattleColor;
+                        }
+            }
+}
+
+.creditsFlexContainer h1 {
+    margin-top: 0; 
+}

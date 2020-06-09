@@ -27,6 +27,21 @@ audio{
 }
 
 
+a {
+  color: $hoverColor;
+  text-decoration: none;
+  text-align: center;
+}
+
+a:hover {
+    background-color: $titleAndBattleColor;
+    padding: 2%; 
+}
+
+a:focus {
+  border: 5px solid $hoverColor;
+}
+
 ul{
   margin: 0;
   padding: 0;
@@ -175,3 +190,34 @@ progress {
       margin: 0 auto; 
     }
 }
+
+// added footer for credits 
+footer {
+  text-align: center;
+  padding: 2%; 
+  background-color: white;
+}
+
+.hideFooterButton {
+    position: absolute;
+    bottom: 50%;
+    left: 0;  
+    color: $volumeButton;
+
+}
+
+.footerHidden {
+  display: none; 
+  position: absolute;
+  bottom: 0; 
+  background-color: white;
+  padding: 2%;
+  border-radius: 15px;
+}
+
+.footerFlexContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+

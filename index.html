@@ -10,6 +10,7 @@
     <title>Battle of the Babies</title>
 </head>
 <body>
+    <main>
  <!-- theme music audio buttons: needs to stay positioned in the body to stay in al three sections of the site -->
     <button id="volumeToggle" class="volumeToggle">
         <i class="far fa-play-circle"></i>
@@ -76,7 +77,18 @@
             </div>
         </div>
         </section>
-        <!-- input footer? for credits! -->
+    </main>
+    <!--footer for credits! lives inside of a button for visual purposes -->
+    <div class="footerFlexContainer">
+    <button class="hideFooterButton"><i class="fas fa-info"></i></button>
+    <footer class="footerHidden">
+        <p>created by <span>Rojhan Paydar</span></p>
+        <a href="file:///Users/rojhanpaydar/Desktop/BOOTCAMP_JUNO_IMMERSIVE_2020/projects/project_3/rojhan_paydar_project_3_battle_of_the_babies/credits.html">CREDITS</a>
+        <!-- <button id="credits">CREDITS</button> -->
+        <p>no babies were harmed in the making of this app</p>
+        <button class="hideFooterButton">X</button>
+            </footer>
+        </div>
         <script src='https://code.jquery.com/jquery-3.4.0.min.js' integrity='sha256-BJeo0qm959uMBGb65z40ejJYGSgR7REI4+CW1fNKwOg=' crossorigin='anonymous'></script>
         <script src="script.js"></script>
     </body>
