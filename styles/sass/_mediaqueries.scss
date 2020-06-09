@@ -43,6 +43,10 @@
         width: 50%; 
         padding: 5%; 
     }
+
+    p blink {
+    display: none; 
+    }
     
 // smallest screen
     @media (max-width: 360px){

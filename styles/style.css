@@ -626,6 +626,9 @@ p blink {
     width: 50%;
     padding: 5%;
   }
+  p blink {
+    display: none;
+  }
 }
 
 @media (max-width: 470px) and (max-width: 360px) {
