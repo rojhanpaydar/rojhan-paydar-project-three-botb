@@ -6,6 +6,8 @@ $titleAndBattleColor: #ffffff;
 $characterMenuColor: #000000; 
 // volume toggle
 $volumeButton: #ff0000; 
+// button bg colour 
+$buttonBackground: #ffe134;
 
 //BATTLE OF THE BABIES CHARACTER SELECTION MENU
 audio{
@@ -13,10 +15,11 @@ audio{
   margin: 0 auto; 
 }
 
+// icons for the music button 
 .volumeToggle {
   position: absolute;
   color: $volumeButton;
-  top: 45%;
+  top: 20%;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -35,6 +38,7 @@ img{
  display: block;
 }
 
+// flexes the characters in the menu section
 .characters{
   display: flex;
   flex-wrap: wrap;
@@ -53,14 +57,14 @@ li{
 h2 {
   text-align: center;
 }
-
+// flex container for character stats (applies the stats in a neat organized way) 
 .flexContainer {
   display: flex; 
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
-
+// flexes the items in battle mode
 .flexContainerBattle {
     display: flex;
     justify-content: space-between;
@@ -77,7 +81,7 @@ h2 {
     background-color: $titleAndBattleColor;
     text-align: center;
       img {
-        width: 80%; 
+        width: 70%; 
         margin: 0 auto; 
       }
           p {
@@ -132,13 +136,13 @@ li {
   width: 20%; 
   position: absolute; 
   bottom: 10%;
-  right: 65%;
+  left: 0;
 }
 
 .displayCpu {
   width: 20%; 
   position: absolute; 
-  right: 18%;
+  right: 0;
   bottom: 10%;
 }
 
@@ -157,3 +161,17 @@ progress {
   right: 0;
 }
 
+.fightResultsBox {
+  width: 40%; 
+  background-color: $buttonBackground;
+  color: $characterMenuColor;
+  display: none; 
+  align-self: center;
+  padding: 2%; 
+  border-radius: 10px;
+  text-align: center;
+    img {
+      width: 80%;
+      margin: 0 auto; 
+    }
+}

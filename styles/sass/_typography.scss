@@ -15,7 +15,7 @@ $buttonBackground: #ffe134;
     font-family: 'Press Start 2P', cursive;
 }
 
-//menu selection title
+//start title text
 h1 {
     @include fontSize(70);
     text-align: center;
@@ -23,10 +23,10 @@ h1 {
     margin: 5% 0 3% 0;
 }
 
+// character menu selection text
 h2 {
     @include fontSize(60);
     text-align: center;
-    // margin-top: 1%; 
     color: $characterMenuColor; 
 }
 
@@ -34,6 +34,7 @@ h3 {
     @include fontSize(18); 
 }
 
+// button in battle mode to start the fight
 .startFight {
     color: $characterMenuColor;
     background-color: $buttonBackground; 
@@ -43,6 +44,7 @@ h3 {
     padding: 2%;
 }
 
+// animates the "start" text in the title page and "add coin" text in the battle mode page
 blink {
     -webkit-animation:blink 0.8s linear infinite;
     -moz-animation:blink 0.8s linear infinite;
@@ -63,16 +65,24 @@ button {
     background: none; 
     border: none; 
     @include fontSize(20);
+    border: 1px dotted $characterMenuColor;
+    padding: 2%; 
 }
 
 p {
     @include fontSize(15);
 }
-
+// applies font size to the <p> with <blink> (start in title screen and insert coin in battle mode)
 p blink {
     @include fontSize(20); 
 }
+// styles the "fight results box" that appears after battle
+.fightResultsBox p {
+    @include fontSize(25); 
+    padding: 1% 0 1% 0; 
+}
 
+// styles and animation to the blinking text 
 @-webkit-keyframes blink {
     0%{opacity:1;}
     50%{opacity:0;}

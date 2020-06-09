@@ -10,7 +10,7 @@
     <title>Battle of the Babies</title>
 </head>
 <body>
-    <!-- start button audio -->
+ <!-- theme music audio buttons: needs to stay positioned in the body to stay in al three sections of the site -->
     <button id="volumeToggle" class="volumeToggle">
         <i class="far fa-play-circle"></i>
         <i class="fas fa-volume-mute"></i>
@@ -18,58 +18,70 @@
 <!-- first section of site -->
 <section class="startTitleScreen">
 <h1>BATTLE OF THE BABIES</h1>
+    <!-- startAudio will play once the user clicks the flashing "START" -->
     <audio id="startAudio">
         <source src="audio/start.wav" type="audio/mpeg">
     </audio>
-
-<button id="startButton" class="start"><blink>START</blink></button>
-    <audio id="themeMusic" autoplay loop>
-        <!-- auto play in audio id area -->
-        <source src="audio/botb_theme.mp3" type="audio/mpeg">
-    </audio>
-
+    <!-- "START" button -->
+    <button id="startButton" class="start"><blink>START</blink></button>
+        <!-- theme music audio -->
+        <audio id="themeMusic" autoplay loop>
+            <source src="audio/botb_theme.mp3" type="audio/mpeg">
+        </audio>
 </section>
 <!-- second section of site -->
 <section id="mainMenuHidden" class="characterSelect wrapper hidden">
     <h2>SELECT YOUR FIGHTER</h2>
+    <!-- this audio will play when the user hover or clicks the li -->
     <audio id="menuSelectAudio">
         <source src="audio/LIHover.mp3" type="audio/mpeg"></source>  
     </audio>
-    <ul class="characters">
-
+    <!-- character selection where users can view character info or select choice -->
+    <ul class="characters">       
     </ul>
         <div class="flexContainer">
+            <!-- characterStats provide info for user to decide on their character -->
             <div class="characterStats">
             </div>
         </div>
-        <audio id="enterBattleMusic">
-            <source src="audio/start_battle.wav" type="audio/mpeg">
+            <!-- this audio plays when the user selects their character and battle mode loads -->
+        <audio id="attack">
+            <source src="audio/click_on_fight.wav" type="audio/mpeg">
             </source>
         </audio>
     </section>
-<!-- third section of site -->
-<section id="battleMode" class="battleMode hidden">
-    <!-- health bar -->
-    <div class="flexContainerBattle">
-        <progress id="health" value="100" max="100"></progress>
-        <progress class ="left" id="cpuHealth" value="100" max="100"></progress>
-
+    <!-- third section of site -->
+    <section id="battleMode" class="battleMode hidden">
+        <!-- health bar -->
+        <div class="flexContainerBattle">
+            <!-- health bar for user and computer -->
+            <progress id="health" value="100" max="100"></progress>
+            <progress class ="left" id="cpuHealth" value="100" max="100"></progress>
         <button class="startFight">START FIGHT</button>
-
+        <!-- insert coin blinking in the corner screen -->
         <p class="coin"><blink>INSERT COIN</blink></p>
-        
+        <!-- displays user on the left side of battle mode -->
         <div class="displayUser">
-
         </div>
-        <div class="displayCpu">
-            
+        <!-- display CPU on the right side of battle mode -->
+            <div class="displayCpu">
         </div>
-    </div>
-
-</section>
-<!-- input footer? for credits! -->
-<script src='https://code.jquery.com/jquery-3.4.0.min.js' integrity='sha256-BJeo0qm959uMBGb65z40ejJYGSgR7REI4+CW1fNKwOg=' crossorigin='anonymous'></script>
-<script src="script.js"></script>
-
-</body>
+            <audio id="resultsAudio">
+                <source src="audio/you_win.wav" type="audio/mpeg">
+                </source>
+            </audio>
+            <!-- fight results will appear at the end and user will have a choice to retry -->
+            <div class="fightResultsBox">
+                <img id="randomImage" alt="Random Gif Of Characters">
+            </div>
+        </div>
+        </section>
+        <!-- input footer? for credits! -->
+        <script src='https://code.jquery.com/jquery-3.4.0.min.js' integrity='sha256-BJeo0qm959uMBGb65z40ejJYGSgR7REI4+CW1fNKwOg=' crossorigin='anonymous'></script>
+        <script src="script.js"></script>
+    </body>
 </html>
+
+        
+
+        

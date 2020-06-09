@@ -1,6 +1,6 @@
 // media queries go here 
 
-
+// entering tablet sizes
 @media (max-width: 830px) {
 
     h1 {
@@ -12,12 +12,12 @@
     }
 
     .characterStats {
-        width: 100%; 
+        width: 70%; 
     }
 
 
 }
-
+// entering smaller screens
 @media (max-width: 470px) {
 
         button {
@@ -25,7 +25,7 @@
         }
 
     .characterStats img {
-        width: 50%;
+        width: 100%;
         padding-top: 20%;
     }
 
@@ -33,7 +33,7 @@
         max-width: 100%; 
     }
     
-
+// smallest screen
     @media (max-width: 360px){
         body {
             max-width: 100%; 
