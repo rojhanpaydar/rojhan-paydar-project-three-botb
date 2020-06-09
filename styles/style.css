@@ -502,6 +502,7 @@ footer {
   background-color: white;
   padding: 2%;
   border-radius: 15px;
+  width: 100%;
 }
 
 .footerFlexContainer {
@@ -712,6 +713,9 @@ p blink {
   }
   .volumeToggle {
     top: 40%;
+  }
+  .hideFooterButton {
+    bottom: 40%;
   }
   .fightResultsBox {
     position: absolute;
