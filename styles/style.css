@@ -624,6 +624,7 @@ p blink {
     position: absolute;
     top: 40%;
     width: 50%;
+    padding: 5%;
   }
 }
 
