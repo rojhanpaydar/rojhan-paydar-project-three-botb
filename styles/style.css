@@ -288,6 +288,10 @@ audio {
   font-size: 30px;
 }
 
+.creditsButtonTag:hover {
+  background-color: rgba(255, 255, 255, 0);
+}
+
 a {
   color: #008000;
   text-decoration: none;
@@ -666,6 +670,8 @@ p blink {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   font-size: 40px;
   font-family: 'Press Start 2P', cursive;
   color: #ffffff;
