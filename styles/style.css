@@ -617,6 +617,14 @@ p blink {
   .battleMode {
     max-width: 100%;
   }
+  .volumeToggle {
+    top: 40%;
+  }
+  .fightResultsBox {
+    position: absolute;
+    top: 40%;
+    width: 50%;
+  }
 }
 
 @media (max-width: 470px) and (max-width: 360px) {

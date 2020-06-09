@@ -20,9 +20,9 @@
 // entering smaller screens
 @media (max-width: 470px) {
 
-        button {
-            font-size: 15px; 
-        }
+    button {
+        font-size: 15px; 
+    }
 
     .characterStats img {
         width: 100%;
@@ -31,6 +31,16 @@
 
     .battleMode {
         max-width: 100%; 
+    }
+
+    .volumeToggle {
+        top: 40%; 
+    }
+
+    .fightResultsBox {
+        position: absolute;
+        top: 40%; 
+        width: 50%; 
     }
     
 // smallest screen
