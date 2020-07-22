@@ -1,35 +1,56 @@
 // colour for hover
-$hoverColor: #008000;  
-// colour for title screen and battle mode 
-$titleAndBattleColor: #ffffff; 
-// colour for character selection menu 
-$characterMenuColor: #000000; 
+$hoverColor: #008000;
+// colour for title screen and battle mode
+$titleAndBattleColor: #ffffff;
+// colour for character selection menu
+$characterMenuColor: #000000;
 // volume toggle
-$volumeButton: #ff0000; 
-// button bg colour 
+$volumeButton: #ff0000;
+// button bg colour
 $buttonBackground: #ffe134;
+// font mix-in
+@mixin fontSize($sizeValue) {
+  font-size: $sizeValue * 1px;
+  font-family: "Press Start 2P", cursive;
+}
 
 //BATTLE OF THE BABIES CHARACTER SELECTION MENU
-audio{
-  width: 8%; 
-  margin: 0 auto; 
+audio {
+  width: 8%;
+  margin: 0 auto;
 }
 
-// icons for the music button 
+// icons for the music button
 .volumeToggle {
-  position: absolute;
   color: $volumeButton;
-  top: 20%;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  font-size: 30px; 
 }
 
+.iconPosition {
+  position: absolute;
+  display: flex;
+  justify-content: space-evenly;
+  font-size: 30px;
+  left: 0;
+  background: #000000bd;
+  flex-direction: column;
+  height: 20%;
+  top: 15%;
+  padding: 1%;
+}
+.creditsButtonTag {
+  @include fontSize(20);
+}
 
 .creditsButtonTag:hover {
   background-color: rgba(255, 255, 255, 0);
-} 
+}
+
+.iconPosition i,
+.iconPosition span,
+.iconPosition .fas {
+  display: flex;
+  flex-direction: column;
+}
 
 a {
   color: $hoverColor;
@@ -38,80 +59,93 @@ a {
 }
 
 a:hover {
-    background-color: $titleAndBattleColor;
-    padding: 2%;  
+  background-color: $titleAndBattleColor;
+  padding: 2%;
 }
 
 a:focus {
   border: 5px solid $hoverColor;
 }
 
-ul{
+ul {
   margin: 0;
   padding: 0;
   list-style: none;
 }
 
-img{
- width: 100%;
- display: block;
+img {
+  width: 100%;
+  display: block;
 }
 
 // flexes the characters in the menu section
-.characters{
+.characters {
   display: flex;
   flex-wrap: wrap;
   margin: 0 auto;
 }
 
-li{
+li {
   flex: 1 0 250px;
   position: relative;
   border: 3px solid $characterMenuColor;
   margin: 10px;
   padding: 10px;
+}
 
+.selection:hover,
+.selection:focus,
+.chosen:hover,
+.chosen:focus,
+.return:hover,
+.return:focus,
+.backToStart:hover,
+.backToStart:focus {
+  background-color: green;
+}
+
+.chosen,
+.return {
+  width: 100%;
 }
 
 h2 {
   text-align: center;
 }
-// flex container for character stats (applies the stats in a neat organized way) 
+// flex container for character stats (applies the stats in a neat organized way)
 .flexContainer {
-  display: flex; 
+  display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
 // flexes the items in battle mode
 .flexContainerBattle {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    flex-direction: column;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-direction: column;
 }
 
 .characterStats {
-    display: block; 
-    width: 550px;
-    margin: 0 auto; 
-    position: absolute; 
-    top: 25%; 
-    background-color: $titleAndBattleColor;
-    text-align: center;
-      img {
-        width: 70%; 
-        margin: 0 auto; 
-      }
-          p {
-            padding-top: 2%; 
-          }
+  display: block;
+  width: 550px;
+  margin: 0 auto;
+  position: absolute;
+  top: 25%;
+  background-color: $titleAndBattleColor;
+  text-align: center;
+  img {
+    width: 70%;
+    margin: 0 auto;
+  }
+  p {
+    padding-top: 2%;
+  }
 }
 
-
-
 section {
-    height: 100vh;
+  height: 100vh;
 }
 
 li:hover,
@@ -121,58 +155,57 @@ button:focus {
 
 button:hover,
 button:focus {
-  cursor: pointer; 
+  cursor: pointer;
 }
-
 
 li {
   flex-direction: column;
   display: flex;
   justify-content: center;
   align-items: center;
-    img {
-      padding-top: 10%;
-      padding-bottom: 10%; 
-    }
+  img {
+    padding-top: 10%;
+    padding-bottom: 10%;
+  }
 }
-
 
 //BATTLE OF THE BABIES FIGHT MODE
 
 .hidden {
-    display: none; 
+  display: none;
 }
 
 .appear {
-    display: inline;
+  display: inline;
 }
 
 .btn {
-   width: 500px;  
+  width: 500px;
 }
 
 .displayUser {
-  width: 20%; 
-  position: absolute; 
+  width: 20%;
+  position: absolute;
   bottom: 10%;
   left: 0;
 }
 
 .displayCpu {
-  width: 20%; 
-  position: absolute; 
+  width: 20%;
+  position: absolute;
   right: 0;
   bottom: 10%;
 }
 
 .coin {
   position: absolute;
-  right: 0; 
+  right: 0;
 }
 
 progress {
-  width: 35%; 
-  padding: 5%; 
+  width: 35%;
+  padding: 5%;
+  transition: all 1s ease-in-out;
 }
 
 .left {
@@ -181,43 +214,46 @@ progress {
 }
 
 .fightResultsBox {
-  width: 40%; 
+  width: 40%;
   background-color: $buttonBackground;
   color: $characterMenuColor;
-  display: none; 
+  display: none;
   align-self: center;
-  padding: 2%; 
+  padding: 2%;
   border-radius: 10px;
   text-align: center;
-    img {
-      width: 80%;
-      margin: 0 auto; 
-    }
+  img {
+    width: 80%;
+    margin: 0 auto;
+  }
 }
 
-// added footer for credits 
+// added footer for credits
 footer {
   text-align: center;
-  padding: 2%; 
+  padding: 2%;
   background-color: white;
 }
 
 .hideFooterButton {
-    position: absolute;
-    bottom: 50%;
-    left: 0;  
-    color: $volumeButton;
+  padding: 1%;
+  color: $volumeButton;
+}
 
+.closeButton {
+  position: absolute;
+  left: 0;
+  top: 0;
 }
 
 .footerHidden {
-  display: none; 
+  display: none;
   position: absolute;
-  bottom: 0; 
+  bottom: 0;
   background-color: white;
   padding: 2%;
-  border-radius: 15px;
-  width: 100%; 
+  width: 100%;
+  line-height: 40px;
 }
 
 .footerFlexContainer {
@@ -225,4 +261,3 @@ footer {
   flex-direction: column;
   justify-content: center;
 }
-

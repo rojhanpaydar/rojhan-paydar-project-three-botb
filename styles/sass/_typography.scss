@@ -1,104 +1,124 @@
 // colour for hover
-$hoverColor: #008000;  
-// colour for title screen and battle mode 
-$titleAndBattleColor: #ffffff; 
-// colour for character selection menu 
-$characterMenuColor: #000000; 
-// button bg colour 
+$hoverColor: #008000;
+// colour for title screen and battle mode
+$titleAndBattleColor: #ffffff;
+// colour for character selection menu
+$characterMenuColor: #000000;
+// button bg colour
 $buttonBackground: #ffe134;
-
 
 // font-family: 'Press Start 2P', cursive;
 
 @mixin fontSize($sizeValue) {
-    font-size: $sizeValue * 1px;
-    font-family: 'Press Start 2P', cursive;
+  font-size: $sizeValue * 1px;
+  font-family: "Press Start 2P", cursive;
 }
 
 //start title text
 h1 {
-    @include fontSize(70);
-    text-align: center;
-    color: $titleAndBattleColor;  
-    margin: 5% 0 3% 0;
+  @include fontSize(70);
+  text-align: center;
+  color: $titleAndBattleColor;
+  margin: 5% 0 3% 0;
 }
 
 // character menu selection text
 h2 {
-    @include fontSize(60);
-    text-align: center;
-    color: $characterMenuColor; 
+  @include fontSize(60);
+  text-align: center;
+  color: $characterMenuColor;
 }
 
 h3 {
-    @include fontSize(18); 
+  @include fontSize(18);
 }
 
 // button in battle mode to start the fight
 .startFight {
-    color: $characterMenuColor;
-    background-color: $buttonBackground; 
-    align-self: center; 
-    position: absolute;
-    bottom: 60%;
-    padding: 2%;
+  color: $characterMenuColor;
+  background-color: $buttonBackground;
+  align-self: center;
+  position: absolute;
+  bottom: 60%;
+  padding: 2%;
+  transition: all 0.1s ease-in-out;
+}
+
+.startFight:hover {
+  background-color: rgb(0, 185, 0);
 }
 
 // animates the "start" text in the title page and "add coin" text in the battle mode page
 blink {
-    -webkit-animation:blink 0.8s linear infinite;
-    -moz-animation:blink 0.8s linear infinite;
-    animation: blink 0.8s linear infinite; 
-     @include fontSize(50);
-     color: $titleAndBattleColor; 
+  -webkit-animation: blink 0.8s linear infinite;
+  -moz-animation: blink 0.8s linear infinite;
+  animation: blink 0.8s linear infinite;
+  @include fontSize(50);
+  color: $titleAndBattleColor;
 }
 
-blink:hover{
-    color: $hoverColor; 
+blink:hover {
+  color: $hoverColor;
 }
 
 blink:focus {
-    border: 2px dotted $titleAndBattleColor;  
+  border: 2px dotted $titleAndBattleColor;
 }
 
 button {
-    background: none; 
-    border: none; 
-    @include fontSize(20);
-    border: 1px dotted $characterMenuColor;
-    padding: 2%; 
+  background: none;
+  border: none;
+  @include fontSize(20);
+  border: 1px dotted $characterMenuColor;
+  padding: 2%;
 }
 
 p {
-    @include fontSize(15);
+  @include fontSize(15);
 }
 // applies font size to the <p> with <blink> (start in title screen and insert coin in battle mode)
 p blink {
-    @include fontSize(20); 
+  @include fontSize(20);
 }
 // styles the "fight results box" that appears after battle
 .fightResultsBox p {
-    @include fontSize(25); 
-    padding: 1% 0 1% 0; 
+  @include fontSize(25);
+  padding: 1% 0 1% 0;
 }
 
-// styles and animation to the blinking text 
+// styles and animation to the blinking text
 @-webkit-keyframes blink {
-    0%{opacity:1;}
-    50%{opacity:0;}
-    100%{opacity:1;}
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
 @-moz-keyframes blink {
-    0%{opacity:1;}
-    50%{opacity:0;}
-    100%{opacity:1;}
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
 @keyframes blink {
-    0%{opacity:1;}
-    50%{opacity:0;}
-    100%{opacity:1;}
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
-
-

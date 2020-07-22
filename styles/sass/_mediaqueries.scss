@@ -1,84 +1,84 @@
-// media queries go here 
+// media queries go here
 
 // entering tablet sizes
 @media (max-width: 830px) {
+  h1 {
+    font-size: 50px;
+  }
 
-    h1 {
-        font-size: 50px; 
-    }
+  h2 {
+    font-size: 40px;
+  }
 
-    h2 {
-        font-size: 40px; 
-    }
+  .characterStats {
+    width: 70%;
+  }
 
-    .characterStats {
-        width: 70%; 
-    }
+  .iconPosition {
+    top: 20%;
+  }
 
-
+  .fightResultsBox p {
+    font-size: 18px;
+  }
 }
 // entering smaller screens
 @media (max-width: 470px) {
+  button {
+    font-size: 15px;
+  }
 
-    button {
-        font-size: 15px; 
+  .characterStats img {
+    width: 100%;
+    padding-top: 20%;
+  }
+
+  .battleMode {
+    max-width: 100%;
+  }
+
+  .creditsFlexContainer {
+    max-width: 100%;
+    h1 {
+      font-size: 50%;
     }
 
-    .characterStats img {
-        width: 100%;
-        padding-top: 20%;
+    li {
+      font-size: 70%;
     }
-
-    .battleMode {
-        max-width: 100%; 
+    a {
+      font-size: 50%;
+      text-align: center;
     }
+  }
 
-    .creditsFlexContainer {
-        max-width: 100%; 
-            h1 {
-                font-size: 50%; 
-            }
+  .volumeToggle {
+    top: 40%;
+  }
 
-            li {
-                font-size: 70%; 
-            }
-                a {
-                    font-size: 50%; 
-                    text-align: center;
-                }
+  .hideFooterButton {
+    bottom: 40%;
+  }
+
+  .fightResultsBox {
+    position: absolute;
+    top: 40%;
+    width: 50%;
+    padding: 5%;
+  }
+
+  .fightResultsBox p {
+    font-size: 80%;
+  }
+
+  p blink {
+    display: none;
+  }
+
+  // smallest screen
+  @media (max-width: 360px) {
+    body {
+      max-width: 100%;
     }
-
-    .volumeToggle {
-        top: 40%; 
-    }
-
-    .hideFooterButton {
-        bottom: 40%; 
-    }
-
-    .fightResultsBox {
-        position: absolute;
-        top: 40%; 
-        width: 50%; 
-        padding: 5%; 
-    }
-
-    .fightResultsBox p {
-        font-size: 80%; 
-    }
-
-    p blink {
-        display: none; 
-    }
-    
-// smallest screen
-    @media (max-width: 360px){
-        body {
-            max-width: 100%; 
-        }
-
-        
-    }
-
+  }
 }
-

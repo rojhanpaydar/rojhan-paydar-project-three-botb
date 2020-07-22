@@ -52,13 +52,12 @@ $("#volumeToggle").on("click", function () {
 
   // set audio volume
   themeMusic.paused = false;
-  themeMusic.volume = 0.1;
 
   // change audio to "on"
   audioClicked = true;
 
   // change favicon to indicate audio status
-  $("i").toggleClass("fa-play-circle").toggleClass("fa-volume-mute");
+  $("i").toggleClass("fa-volume-mute").toggleClass("fa-play-circle");
 });
 
 // game starts with a title screen, that fades and hides once you click start button

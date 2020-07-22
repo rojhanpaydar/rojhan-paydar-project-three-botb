@@ -272,9 +272,41 @@ audio {
 }
 
 .volumeToggle {
-  position: absolute;
   color: #ff0000;
-  top: 20%;
+}
+
+.iconPosition {
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  font-size: 30px;
+  left: 0;
+  background: #000000bd;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  height: 20%;
+  top: 15%;
+  padding: 1%;
+}
+
+.creditsButtonTag {
+  font-size: 20px;
+  font-family: "Press Start 2P", cursive;
+}
+
+.creditsButtonTag:hover {
+  background-color: rgba(255, 255, 255, 0);
+}
+
+.iconPosition i,
+.iconPosition span,
+.iconPosition .fas {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -282,14 +314,6 @@ audio {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
-  font-size: 30px;
-}
-
-.creditsButtonTag:hover {
-  background-color: rgba(255, 255, 255, 0);
 }
 
 a {
@@ -335,6 +359,22 @@ li {
   border: 3px solid #000000;
   margin: 10px;
   padding: 10px;
+}
+
+.selection:hover,
+.selection:focus,
+.chosen:hover,
+.chosen:focus,
+.return:hover,
+.return:focus,
+.backToStart:hover,
+.backToStart:focus {
+  background-color: green;
+}
+
+.chosen,
+.return {
+  width: 100%;
 }
 
 h2 {
@@ -461,6 +501,8 @@ li img {
 progress {
   width: 35%;
   padding: 5%;
+  -webkit-transition: all 1s ease-in-out;
+  transition: all 1s ease-in-out;
 }
 
 .left {
@@ -493,10 +535,14 @@ footer {
 }
 
 .hideFooterButton {
-  position: absolute;
-  bottom: 50%;
-  left: 0;
+  padding: 1%;
   color: #ff0000;
+}
+
+.closeButton {
+  position: absolute;
+  left: 0;
+  top: 0;
 }
 
 .footerHidden {
@@ -505,8 +551,8 @@ footer {
   bottom: 0;
   background-color: white;
   padding: 2%;
-  border-radius: 15px;
   width: 100%;
+  line-height: 40px;
 }
 
 .footerFlexContainer {
@@ -524,7 +570,7 @@ footer {
 
 h1 {
   font-size: 70px;
-  font-family: 'Press Start 2P', cursive;
+  font-family: "Press Start 2P", cursive;
   text-align: center;
   color: #ffffff;
   margin: 5% 0 3% 0;
@@ -532,14 +578,14 @@ h1 {
 
 h2 {
   font-size: 60px;
-  font-family: 'Press Start 2P', cursive;
+  font-family: "Press Start 2P", cursive;
   text-align: center;
   color: #000000;
 }
 
 h3 {
   font-size: 18px;
-  font-family: 'Press Start 2P', cursive;
+  font-family: "Press Start 2P", cursive;
 }
 
 .startFight {
@@ -551,13 +597,19 @@ h3 {
   position: absolute;
   bottom: 60%;
   padding: 2%;
+  -webkit-transition: all 0.1s ease-in-out;
+  transition: all 0.1s ease-in-out;
+}
+
+.startFight:hover {
+  background-color: #00b900;
 }
 
 blink {
   -webkit-animation: blink 0.8s linear infinite;
   animation: blink 0.8s linear infinite;
   font-size: 50px;
-  font-family: 'Press Start 2P', cursive;
+  font-family: "Press Start 2P", cursive;
   color: #ffffff;
 }
 
@@ -573,24 +625,24 @@ button {
   background: none;
   border: none;
   font-size: 20px;
-  font-family: 'Press Start 2P', cursive;
+  font-family: "Press Start 2P", cursive;
   border: 1px dotted #000000;
   padding: 2%;
 }
 
 p {
   font-size: 15px;
-  font-family: 'Press Start 2P', cursive;
+  font-family: "Press Start 2P", cursive;
 }
 
 p blink {
   font-size: 20px;
-  font-family: 'Press Start 2P', cursive;
+  font-family: "Press Start 2P", cursive;
 }
 
 .fightResultsBox p {
   font-size: 25px;
-  font-family: 'Press Start 2P', cursive;
+  font-family: "Press Start 2P", cursive;
   padding: 1% 0 1% 0;
 }
 
@@ -644,6 +696,9 @@ p blink {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   color: white;
 }
 
@@ -673,7 +728,7 @@ p blink {
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   font-size: 40px;
-  font-family: 'Press Start 2P', cursive;
+  font-family: "Press Start 2P", cursive;
   color: #ffffff;
 }
 
@@ -703,6 +758,12 @@ p blink {
   }
   .characterStats {
     width: 70%;
+  }
+  .iconPosition {
+    top: 20%;
+  }
+  .fightResultsBox p {
+    font-size: 18px;
   }
 }
 
