@@ -815,4 +815,7 @@ p blink {
   body {
     max-width: 100%;
   }
+  .iconPosition {
+    top: 40%;
+  }
 }
