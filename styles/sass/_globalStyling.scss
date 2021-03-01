@@ -183,6 +183,69 @@ li {
   width: 500px;
 }
 
+.hellaKickLeft {
+  transform: translate(200%, 0);
+    -webkit-transform: translate(200%, 0); /** Safari & Chrome **/
+    -o-transform: translate(200%, 0); /** Opera **/
+    -moz-transform: translate(200%, 0); /** Firefox **/
+  animation: KickLeft 1.4s;
+}
+
+
+@keyframes KickLeft {
+  0% { transform: translate(0%, 0);}
+  20% { transform: translate(10%, 0); }
+  70% { transform: translate(-20%, 0) ; }
+  80% { transform: translate(40%, 0); }
+  100% { transform: translate(30%, 0); }
+}
+
+.hellaKickRight {
+  transform: translate(200%, 0);
+    -webkit-transform: translate(200%, 0); /** Safari & Chrome **/
+    -o-transform: translate(200%, 0); /** Opera **/
+    -moz-transform: translate(200%, 0); /** Firefox **/
+  animation: KickRight 1.4s;
+}
+
+
+@keyframes KickRight {
+  0% { transform: translate(0%, 0);}
+  20% { transform: translate(-10%, 0); }
+  70% { transform: translate(20%, 0) ; }
+  80% { transform: translate(-40%, 0); }
+  100% { transform: translate(-30%, 0); }
+}
+
+.bounceLeft {
+  animation: bounceLeft 1.4s;
+}
+
+
+@keyframes bounceLeft {
+  0% { transform: translate(0%, 0);}
+  20% { transform: translate(50%, 0); }
+  70% { transform: translate(180%, 0) ; }
+  80% { transform: translate(10%, 0); }
+  100% { transform: translate(0%, 0); }
+}
+
+.bounceRight {
+  animation: bounceRight 1.4s;
+}
+
+
+@keyframes bounceRight {
+  0% { transform: translate(0%, 0);}
+  20% { transform: translate(-50%, 0); }
+  70% { transform: translate(-180%, 0) ; }
+  80% { transform: translate(-10%, 0); }
+  100% { transform: translate(0%, 0); }
+}
+
+
+
+
 .displayUser {
   width: 20%;
   position: absolute;
@@ -190,11 +253,44 @@ li {
   left: 0;
 }
 
+.shook{
+  animation: shake 0.8s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes shake {
+  0% { transform: translate(1px, 1px) rotate(0deg); }
+  10% { transform: translate(-1px, -2px) rotate(-1deg); }
+  20% { transform: translate(-3px, 0px) rotate(1deg); }
+  30% { transform: translate(3px, 2px) rotate(0deg); }
+  40% { transform: translate(1px, -1px) rotate(1deg); }
+  50% { transform: translate(-1px, 2px) rotate(-1deg); }
+  60% { transform: translate(-3px, 1px) rotate(0deg); }
+  70% { transform: translate(3px, 1px) rotate(-1deg); }
+  80% { transform: translate(-1px, -1px) rotate(1deg); }
+  90% { transform: translate(1px, 2px) rotate(0deg); }
+  100% { transform: translate(1px, -2px) rotate(-1deg); }
+}
+
 .displayCpu {
   width: 20%;
   position: absolute;
   right: 0;
   bottom: 10%;
+}
+
+@keyframes shake {
+  0% { transform: translate(1px, 1px) rotate(0deg); }
+  10% { transform: translate(-1px, -2px) rotate(-1deg); }
+  20% { transform: translate(-3px, 0px) rotate(1deg); }
+  30% { transform: translate(3px, 2px) rotate(0deg); }
+  40% { transform: translate(1px, -1px) rotate(1deg); }
+  50% { transform: translate(-1px, 2px) rotate(-1deg); }
+  60% { transform: translate(-3px, 1px) rotate(0deg); }
+  70% { transform: translate(3px, 1px) rotate(-1deg); }
+  80% { transform: translate(-1px, -1px) rotate(1deg); }
+  90% { transform: translate(1px, 2px) rotate(0deg); }
+  100% { transform: translate(1px, -2px) rotate(-1deg); }
 }
 
 .coin {
