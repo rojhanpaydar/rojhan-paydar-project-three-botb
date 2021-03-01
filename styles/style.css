@@ -1,206 +1,159 @@
 html {
   line-height: 1.15;
   -ms-text-size-adjust: 100%;
-  -webkit-text-size-adjust: 100%;
-}
+  -webkit-text-size-adjust: 100%; }
 
 body {
-  margin: 0;
-}
+  margin: 0; }
 
 article, aside, footer, header, nav, section {
-  display: block;
-}
+  display: block; }
 
 h1 {
   font-size: 2em;
-  margin: .67em 0;
-}
+  margin: .67em 0; }
 
 figcaption, figure, main {
-  display: block;
-}
+  display: block; }
 
 figure {
-  margin: 1em 40px;
-}
+  margin: 1em 40px; }
 
 hr {
-  -webkit-box-sizing: content-box;
-          box-sizing: content-box;
+  box-sizing: content-box;
   height: 0;
-  overflow: visible;
-}
+  overflow: visible; }
 
 pre {
   font-family: monospace,monospace;
-  font-size: 1em;
-}
+  font-size: 1em; }
 
 a {
   background-color: transparent;
-  -webkit-text-decoration-skip: objects;
-}
+  -webkit-text-decoration-skip: objects; }
 
 abbr[title] {
   border-bottom: none;
   text-decoration: underline;
-  -webkit-text-decoration: underline dotted;
-          text-decoration: underline dotted;
-}
+  text-decoration: underline dotted; }
 
 b, strong {
-  font-weight: inherit;
-}
+  font-weight: inherit; }
 
 b, strong {
-  font-weight: bolder;
-}
+  font-weight: bolder; }
 
 code, kbd, samp {
   font-family: monospace,monospace;
-  font-size: 1em;
-}
+  font-size: 1em; }
 
 dfn {
-  font-style: italic;
-}
+  font-style: italic; }
 
 mark {
   background-color: #ff0;
-  color: #000;
-}
+  color: #000; }
 
 small {
-  font-size: 80%;
-}
+  font-size: 80%; }
 
 sub, sup {
   font-size: 75%;
   line-height: 0;
   position: relative;
-  vertical-align: baseline;
-}
+  vertical-align: baseline; }
 
 sub {
-  bottom: -.25em;
-}
+  bottom: -.25em; }
 
 sup {
-  top: -.5em;
-}
+  top: -.5em; }
 
 audio, video {
-  display: inline-block;
-}
+  display: inline-block; }
 
 audio:not([controls]) {
   display: none;
-  height: 0;
-}
+  height: 0; }
 
 img {
-  border-style: none;
-}
+  border-style: none; }
 
 svg:not(:root) {
-  overflow: hidden;
-}
+  overflow: hidden; }
 
 button, input, optgroup, select, textarea {
   font-family: sans-serif;
   font-size: 100%;
   line-height: 1.15;
-  margin: 0;
-}
+  margin: 0; }
 
 button, input {
-  overflow: visible;
-}
+  overflow: visible; }
 
 button, select {
-  text-transform: none;
-}
+  text-transform: none; }
 
 button, html [type=button], [type=reset], [type=submit] {
-  -webkit-appearance: button;
-}
+  -webkit-appearance: button; }
 
 button::-moz-focus-inner, [type=button]::-moz-focus-inner, [type=reset]::-moz-focus-inner, [type=submit]::-moz-focus-inner {
   border-style: none;
-  padding: 0;
-}
+  padding: 0; }
 
 button:-moz-focusring, [type=button]:-moz-focusring, [type=reset]:-moz-focusring, [type=submit]:-moz-focusring {
-  outline: 1px dotted ButtonText;
-}
+  outline: 1px dotted ButtonText; }
 
 fieldset {
-  padding: .35em .75em .625em;
-}
+  padding: .35em .75em .625em; }
 
 legend {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
   color: inherit;
   display: table;
   max-width: 100%;
   padding: 0;
-  white-space: normal;
-}
+  white-space: normal; }
 
 progress {
   display: inline-block;
-  vertical-align: baseline;
-}
+  vertical-align: baseline; }
 
 textarea {
-  overflow: auto;
-}
+  overflow: auto; }
 
 [type=checkbox], [type=radio] {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  padding: 0;
-}
+  box-sizing: border-box;
+  padding: 0; }
 
 [type=number]::-webkit-inner-spin-button, [type=number]::-webkit-outer-spin-button {
-  height: auto;
-}
+  height: auto; }
 
 [type=search] {
   -webkit-appearance: textfield;
-  outline-offset: -2px;
-}
+  outline-offset: -2px; }
 
 [type=search]::-webkit-search-cancel-button, [type=search]::-webkit-search-decoration {
-  -webkit-appearance: none;
-}
+  -webkit-appearance: none; }
 
 ::-webkit-file-upload-button {
   -webkit-appearance: button;
-  font: inherit;
-}
+  font: inherit; }
 
 details, menu {
-  display: block;
-}
+  display: block; }
 
 summary {
-  display: list-item;
-}
+  display: list-item; }
 
 canvas {
-  display: inline-block;
-}
+  display: inline-block; }
 
 template {
-  display: none;
-}
+  display: none; }
 
 [hidden] {
-  display: none;
-}
+  display: none; }
 
 .clearfix:after {
   visibility: hidden;
@@ -208,18 +161,15 @@ template {
   font-size: 0;
   content: '';
   clear: both;
-  height: 0;
-}
+  height: 0; }
 
 html {
+  -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
-  box-sizing: border-box;
-}
+  box-sizing: border-box; }
 
 *, *:before, *:after {
-  -webkit-box-sizing: inherit;
-          box-sizing: inherit;
-}
+  box-sizing: inherit; }
 
 .sr-only {
   position: absolute;
@@ -229,21 +179,17 @@ html {
   border: 0;
   padding: 0;
   white-space: nowrap;
-  -webkit-clip-path: inset(100%);
-          clip-path: inset(100%);
+  clip-path: inset(100%);
   clip: rect(0 0 0 0);
-  overflow: hidden;
-}
+  overflow: hidden; }
 
 html {
+  -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
-  box-sizing: border-box;
-}
+  box-sizing: border-box; }
 
 *, *:before, *:after {
-  -webkit-box-sizing: inherit;
-          box-sizing: inherit;
-}
+  box-sizing: inherit; }
 
 ul,
 h1,
@@ -252,114 +198,81 @@ h3,
 h4,
 p {
   margin: 0;
-  padding: 0;
-}
+  padding: 0; }
 
 img {
   max-width: 100%;
-  display: block;
-}
+  display: block; }
 
 .wrapper {
   max-width: 1280px;
   margin: 0 auto;
-  width: 80%;
-}
+  width: 80%; }
 
 audio {
   width: 8%;
-  margin: 0 auto;
-}
+  margin: 0 auto; }
 
 .volumeToggle {
-  color: #ff0000;
-}
+  color: #ff0000; }
 
 .iconPosition {
   position: absolute;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
+  justify-content: space-evenly;
   font-size: 30px;
   left: 0;
   background: #000000bd;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  flex-direction: column;
   height: 20%;
   top: 15%;
-  padding: 1%;
-}
+  padding: 1%; }
 
 .creditsButtonTag {
   font-size: 20px;
-  font-family: "Press Start 2P", cursive;
-}
+  font-family: "Press Start 2P", cursive; }
 
 .creditsButtonTag:hover {
-  background-color: rgba(255, 255, 255, 0);
-}
+  background-color: rgba(255, 255, 255, 0); }
 
 .iconPosition i,
 .iconPosition span,
 .iconPosition .fas {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-}
+  flex-direction: column; }
 
 a {
   color: #008000;
   text-decoration: none;
-  text-align: center;
-}
+  text-align: center; }
 
 a:hover {
   background-color: #ffffff;
-  padding: 2%;
-}
+  padding: 2%; }
 
 a:focus {
-  border: 5px solid #008000;
-}
+  border: 5px solid #008000; }
 
 ul {
   margin: 0;
   padding: 0;
-  list-style: none;
-}
+  list-style: none; }
 
 img {
   width: 100%;
-  display: block;
-}
+  display: block; }
 
 .characters {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  margin: 0 auto;
-}
+  flex-wrap: wrap;
+  margin: 0 auto; }
 
 li {
-  -webkit-box-flex: 1;
-      -ms-flex: 1 0 250px;
-          flex: 1 0 250px;
+  flex: 1 0 250px;
   position: relative;
   border: 3px solid #000000;
   margin: 10px;
-  padding: 10px;
-}
+  padding: 10px; }
 
 .selection:hover,
 .selection:focus,
@@ -369,49 +282,26 @@ li {
 .return:focus,
 .backToStart:hover,
 .backToStart:focus {
-  background-color: green;
-}
+  background-color: green; }
 
 .chosen,
 .return {
-  width: 100%;
-}
+  width: 100%; }
 
 h2 {
-  text-align: center;
-}
+  text-align: center; }
 
 .flexContainer {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; }
 
 .flexContainerBattle {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-}
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-direction: column; }
 
 .characterStats {
   display: block;
@@ -420,130 +310,213 @@ h2 {
   position: absolute;
   top: 25%;
   background-color: #ffffff;
-  text-align: center;
-}
-
-.characterStats img {
-  width: 70%;
-  margin: 0 auto;
-}
-
-.characterStats p {
-  padding-top: 2%;
-}
+  text-align: center; }
+  .characterStats img {
+    width: 70%;
+    margin: 0 auto; }
+  .characterStats p {
+    padding-top: 2%; }
 
 section {
-  height: 100vh;
-}
+  height: 100vh; }
 
 li:hover,
 button:focus {
-  border: 5px solid #008000;
-}
+  border: 5px solid #008000; }
 
 button:hover,
 button:focus {
-  cursor: pointer;
-}
+  cursor: pointer; }
 
 li {
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  display: -webkit-box;
-  display: -ms-flexbox;
+  flex-direction: column;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-li img {
-  padding-top: 10%;
-  padding-bottom: 10%;
-}
+  justify-content: center;
+  align-items: center; }
+  li img {
+    padding-top: 10%;
+    padding-bottom: 10%; }
 
 .hidden {
-  display: none;
-}
+  display: none; }
 
 .appear {
-  display: inline;
-}
+  display: inline; }
 
 .btn {
-  width: 500px;
-}
+  width: 500px; }
 
+.hellaKickLeft {
+  transform: translate(200%, 0);
+  -webkit-transform: translate(200%, 0);
+  /** Safari & Chrome **/
+  -o-transform: translate(200%, 0);
+  /** Opera **/
+  -moz-transform: translate(200%, 0);
+  /** Firefox **/
+  animation: KickLeft 1.4s; }
+
+@keyframes KickLeft {
+  0% {
+    transform: translate(0%, 0); }
+  20% {
+    transform: translate(10%, 0); }
+  70% {
+    transform: translate(-20%, 0); }
+  80% {
+    transform: translate(40%, 0); }
+  100% {
+    transform: translate(30%, 0); } }
+.hellaKickRight {
+  transform: translate(200%, 0);
+  -webkit-transform: translate(200%, 0);
+  /** Safari & Chrome **/
+  -o-transform: translate(200%, 0);
+  /** Opera **/
+  -moz-transform: translate(200%, 0);
+  /** Firefox **/
+  animation: KickRight 1.4s; }
+
+@keyframes KickRight {
+  0% {
+    transform: translate(0%, 0); }
+  20% {
+    transform: translate(-10%, 0); }
+  70% {
+    transform: translate(20%, 0); }
+  80% {
+    transform: translate(-40%, 0); }
+  100% {
+    transform: translate(-30%, 0); } }
+.bounceLeft {
+  animation: bounceLeft 1.4s; }
+
+@keyframes bounceLeft {
+  0% {
+    transform: translate(0%, 0); }
+  20% {
+    transform: translate(50%, 0); }
+  70% {
+    transform: translate(180%, 0); }
+  80% {
+    transform: translate(10%, 0); }
+  100% {
+    transform: translate(0%, 0); } }
+.bounceRight {
+  animation: bounceRight 1.4s; }
+
+@keyframes bounceRight {
+  0% {
+    transform: translate(0%, 0); }
+  20% {
+    transform: translate(-50%, 0); }
+  70% {
+    transform: translate(-180%, 0); }
+  80% {
+    transform: translate(-10%, 0); }
+  100% {
+    transform: translate(0%, 0); } }
 .displayUser {
   width: 20%;
   position: absolute;
   bottom: 10%;
-  left: 0;
-}
+  left: 0; }
 
+.shook {
+  animation: shake 0.8s;
+  animation-iteration-count: infinite; }
+
+@keyframes shake {
+  0% {
+    transform: translate(1px, 1px) rotate(0deg); }
+  10% {
+    transform: translate(-1px, -2px) rotate(-1deg); }
+  20% {
+    transform: translate(-3px, 0px) rotate(1deg); }
+  30% {
+    transform: translate(3px, 2px) rotate(0deg); }
+  40% {
+    transform: translate(1px, -1px) rotate(1deg); }
+  50% {
+    transform: translate(-1px, 2px) rotate(-1deg); }
+  60% {
+    transform: translate(-3px, 1px) rotate(0deg); }
+  70% {
+    transform: translate(3px, 1px) rotate(-1deg); }
+  80% {
+    transform: translate(-1px, -1px) rotate(1deg); }
+  90% {
+    transform: translate(1px, 2px) rotate(0deg); }
+  100% {
+    transform: translate(1px, -2px) rotate(-1deg); } }
 .displayCpu {
   width: 20%;
   position: absolute;
   right: 0;
-  bottom: 10%;
-}
+  bottom: 10%; }
 
+@keyframes shake {
+  0% {
+    transform: translate(1px, 1px) rotate(0deg); }
+  10% {
+    transform: translate(-1px, -2px) rotate(-1deg); }
+  20% {
+    transform: translate(-3px, 0px) rotate(1deg); }
+  30% {
+    transform: translate(3px, 2px) rotate(0deg); }
+  40% {
+    transform: translate(1px, -1px) rotate(1deg); }
+  50% {
+    transform: translate(-1px, 2px) rotate(-1deg); }
+  60% {
+    transform: translate(-3px, 1px) rotate(0deg); }
+  70% {
+    transform: translate(3px, 1px) rotate(-1deg); }
+  80% {
+    transform: translate(-1px, -1px) rotate(1deg); }
+  90% {
+    transform: translate(1px, 2px) rotate(0deg); }
+  100% {
+    transform: translate(1px, -2px) rotate(-1deg); } }
 .coin {
   position: absolute;
-  right: 0;
-}
+  right: 0; }
 
 progress {
   width: 35%;
   padding: 5%;
-  -webkit-transition: all 1s ease-in-out;
-  transition: all 1s ease-in-out;
-}
+  transition: all 1s ease-in-out; }
 
 .left {
   position: absolute;
-  right: 0;
-}
+  right: 0; }
 
 .fightResultsBox {
   width: 40%;
   background-color: #ffe134;
   color: #000000;
   display: none;
-  -ms-flex-item-align: center;
-      -ms-grid-row-align: center;
-      align-self: center;
+  align-self: center;
   padding: 2%;
   border-radius: 10px;
-  text-align: center;
-}
-
-.fightResultsBox img {
-  width: 80%;
-  margin: 0 auto;
-}
+  text-align: center; }
+  .fightResultsBox img {
+    width: 80%;
+    margin: 0 auto; }
 
 footer {
   text-align: center;
   padding: 2%;
-  background-color: white;
-}
+  background-color: white; }
 
 .hideFooterButton {
   padding: 1%;
-  color: #ff0000;
-}
+  color: #ff0000; }
 
 .closeButton {
   position: absolute;
   left: 0;
-  top: 0;
-}
+  top: 0; }
 
 .footerHidden {
   display: none;
@@ -552,74 +525,55 @@ footer {
   background-color: white;
   padding: 2%;
   width: 100%;
-  line-height: 40px;
-}
+  line-height: 40px; }
 
 .footerFlexContainer {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-}
+  flex-direction: column;
+  justify-content: center; }
 
 h1 {
   font-size: 70px;
   font-family: "Press Start 2P", cursive;
   text-align: center;
   color: #ffffff;
-  margin: 5% 0 3% 0;
-}
+  margin: 5% 0 3% 0; }
 
 h2 {
   font-size: 60px;
   font-family: "Press Start 2P", cursive;
   text-align: center;
-  color: #000000;
-}
+  color: #000000; }
 
 h3 {
   font-size: 18px;
-  font-family: "Press Start 2P", cursive;
-}
+  font-family: "Press Start 2P", cursive; }
 
 .startFight {
   color: #000000;
   background-color: #ffe134;
-  -ms-flex-item-align: center;
-      -ms-grid-row-align: center;
-      align-self: center;
+  align-self: center;
   position: absolute;
   bottom: 60%;
   padding: 2%;
-  -webkit-transition: all 0.1s ease-in-out;
-  transition: all 0.1s ease-in-out;
-}
+  transition: all 0.1s ease-in-out; }
 
 .startFight:hover {
-  background-color: #00b900;
-}
+  background-color: #00b900; }
 
 blink {
   -webkit-animation: blink 0.8s linear infinite;
+  -moz-animation: blink 0.8s linear infinite;
   animation: blink 0.8s linear infinite;
   font-size: 50px;
   font-family: "Press Start 2P", cursive;
-  color: #ffffff;
-}
+  color: #ffffff; }
 
 blink:hover {
-  color: #008000;
-}
+  color: #008000; }
 
 blink:focus {
-  border: 2px dotted #ffffff;
-}
+  border: 2px dotted #ffffff; }
 
 button {
   background: none;
@@ -627,61 +581,52 @@ button {
   font-size: 20px;
   font-family: "Press Start 2P", cursive;
   border: 1px dotted #000000;
-  padding: 2%;
-}
+  padding: 2%; }
 
 p {
   font-size: 15px;
-  font-family: "Press Start 2P", cursive;
-}
+  font-family: "Press Start 2P", cursive; }
 
 p blink {
   font-size: 20px;
-  font-family: "Press Start 2P", cursive;
-}
+  font-family: "Press Start 2P", cursive; }
 
 .fightResultsBox p {
   font-size: 25px;
   font-family: "Press Start 2P", cursive;
-  padding: 1% 0 1% 0;
-}
+  padding: 1% 0 1% 0; }
 
 @-webkit-keyframes blink {
   0% {
-    opacity: 1;
-  }
+    opacity: 1; }
   50% {
-    opacity: 0;
-  }
+    opacity: 0; }
   100% {
-    opacity: 1;
-  }
-}
-
+    opacity: 1; } }
+@-moz-keyframes blink {
+  0% {
+    opacity: 1; }
+  50% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
 @keyframes blink {
   0% {
-    opacity: 1;
-  }
+    opacity: 1; }
   50% {
-    opacity: 0;
-  }
+    opacity: 0; }
   100% {
-    opacity: 1;
-  }
-}
-
+    opacity: 1; } }
 .battleMode {
   background-size: cover;
   background-repeat: no-repeat;
-  background-position: center;
-}
+  background-position: center; }
 
 .creditsFlexContainer {
   background-color: black;
   background-image: url(../assets/fire_start.gif);
   background-repeat: repeat-x;
-  background-size: contain;
-}
+  background-size: contain; }
 
 .startTitleScreen {
   background-color: black;
@@ -689,133 +634,119 @@ p blink {
   background-repeat: repeat-x;
   background-size: contain;
   background-position: center;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  color: white;
-}
-
-.startTitleScreen p {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-}
+  flex-direction: column;
+  align-items: center;
+  color: white; }
+  .startTitleScreen p {
+    display: flex;
+    justify-content: center; }
 
 .creditsFlexContainer {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
   font-size: 40px;
   font-family: "Press Start 2P", cursive;
-  color: #ffffff;
-}
-
-.creditsFlexContainer ul {
-  font-size: 30%;
-}
-
-.creditsFlexContainer ul li {
-  border-style: none;
-}
-
-.creditsFlexContainer ul li:hover {
-  color: #000000;
-  background-color: #ffffff;
-}
+  color: #ffffff; }
+  .creditsFlexContainer ul {
+    font-size: 30%; }
+    .creditsFlexContainer ul li {
+      border-style: none; }
+    .creditsFlexContainer ul li:hover {
+      color: #000000;
+      background-color: #ffffff; }
 
 .creditsFlexContainer h1 {
-  margin-top: 0;
-}
+  margin-top: 0; }
 
 @media (max-width: 830px) {
   h1 {
-    font-size: 50px;
-  }
-  h2 {
-    font-size: 40px;
-  }
-  .characterStats {
-    width: 70%;
-  }
-  .iconPosition {
-    top: 20%;
-  }
-  .fightResultsBox p {
-    font-size: 18px;
-  }
-}
+    font-size: 50px; }
 
+  h2 {
+    font-size: 40px; }
+
+  .characterStats {
+    width: 70%; }
+
+  .iconPosition {
+    top: 20%; }
+
+  .fightResultsBox p {
+    font-size: 18px; } }
 @media (max-width: 470px) {
   button {
-    font-size: 15px;
-  }
+    font-size: 15px; }
+
   .characterStats img {
     width: 100%;
-    padding-top: 20%;
-  }
+    padding-top: 20%; }
+
   .battleMode {
-    max-width: 100%;
-  }
+    max-width: 100%; }
+
   .creditsFlexContainer {
-    max-width: 100%;
-  }
-  .creditsFlexContainer h1 {
-    font-size: 50%;
-  }
-  .creditsFlexContainer li {
-    font-size: 70%;
-  }
-  .creditsFlexContainer a {
-    font-size: 50%;
-    text-align: center;
-  }
+    max-width: 100%; }
+    .creditsFlexContainer h1 {
+      font-size: 50%; }
+    .creditsFlexContainer li {
+      font-size: 70%; }
+    .creditsFlexContainer a {
+      font-size: 50%;
+      text-align: center; }
+
   .volumeToggle {
-    top: 40%;
-  }
+    top: 40%; }
+
   .hideFooterButton {
-    bottom: 40%;
-  }
+    bottom: 40%; }
+
   .fightResultsBox {
     position: absolute;
     top: 40%;
     width: 50%;
-    padding: 5%;
-  }
-  .fightResultsBox p {
-    font-size: 80%;
-  }
-  p blink {
-    display: none;
-  }
-}
+    padding: 5%; }
 
+  .fightResultsBox p {
+    font-size: 80%; }
+
+  p blink {
+    display: none; } }
 @media (max-width: 470px) and (max-width: 360px) {
   body {
-    max-width: 100%;
-  }
+    max-width: 100%; }
+
   .iconPosition {
-    top: 40%;
-  }
-}
+    top: 40%; } }
+.babyCharacter:hover {
+  animation: shake 0.5s;
+  animation-iteration-count: infinite; }
+
+@keyframes shake {
+  0% {
+    transform: translate(1px, 1px) rotate(0deg); }
+  10% {
+    transform: translate(-1px, -2px) rotate(-1deg); }
+  20% {
+    transform: translate(-3px, 0px) rotate(1deg); }
+  30% {
+    transform: translate(3px, 2px) rotate(0deg); }
+  40% {
+    transform: translate(1px, -1px) rotate(1deg); }
+  50% {
+    transform: translate(-1px, 2px) rotate(-1deg); }
+  60% {
+    transform: translate(-3px, 1px) rotate(0deg); }
+  70% {
+    transform: translate(3px, 1px) rotate(-1deg); }
+  80% {
+    transform: translate(-1px, -1px) rotate(1deg); }
+  90% {
+    transform: translate(1px, 2px) rotate(0deg); }
+  100% {
+    transform: translate(1px, -2px) rotate(-1deg); } }
+
+/*# sourceMappingURL=style.css.map */

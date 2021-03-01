@@ -243,6 +243,13 @@ $(".startFight").on("click", function () {
 // if user loses, hide the button to "start the fight", and reveal their results. User will have the choice to return to the main menu
 let gameOverLose = function (results) {
   $(".startFight").hide();
+  $(".displayCpu").addClass("hellaKickLeft");
+  $(".displayUser").addClass("hellaKickRight");
+  setTimeout(
+    function() 
+    {
+      $(".displayCpu").addClass("shook");
+    }, 1400);
   $(".fightResultsBox")
     .append(
       `<p>Oh no... you ${results}</p>
@@ -257,6 +264,14 @@ let gameOverLose = function (results) {
 // if user ties, hide the button to "start the fight", and reveal their results. User will have the choice to return to the main menu
 let gameOverTie = function (results) {
   $(".startFight").hide();
+  $(".displayCpu").addClass("bounceRight");
+  $(".displayUser").addClass("bounceLeft");
+  setTimeout(
+    function() 
+    {
+      $(".displayCpu").addClass("shook");
+      $(".displayUser").addClass("shook");
+    }, 1400);
   $(".fightResultsBox")
     .append(
       `<p>You've met your match.. you ${results}</p> 
@@ -271,6 +286,14 @@ let gameOverTie = function (results) {
 // if user wins, hide the button to "start the fight", and reveal their results. User will have the choice to return to the main menu
 let gameOverWin = function (results) {
   $(".startFight").hide();
+  $(".displayCpu").addClass("hellaKickLeft");
+  $(".displayUser").addClass("hellaKickRight");
+  setTimeout(
+    function() 
+    {
+      $(".displayUser").addClass("shook");
+    }, 1400);
+
   $(".fightResultsBox")
     .append(
       `<p>You are the strongest baby... you ${results}</p> 
