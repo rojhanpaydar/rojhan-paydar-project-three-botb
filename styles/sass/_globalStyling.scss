@@ -196,8 +196,8 @@ li {
   0% { transform: translate(0%, 0);}
   20% { transform: translate(10%, 0); }
   70% { transform: translate(-120%, 0) ; }
-  80% { transform: translate(40%, 0); }
-  100% { transform: translate(30%, 0); }
+  80% { transform: translate(0%, 0); }
+  100% { transform: translate(0%, 0); }
 }
 
 .hellaKickRight {
@@ -213,8 +213,8 @@ li {
   0% { transform: translate(0%, 0);}
   20% { transform: translate(-10%, 0); }
   70% { transform: translate(120%, 0) ; }
-  80% { transform: translate(-40%, 0); }
-  100% { transform: translate(-30%, 0); }
+  80% { transform: translate(0%, 0); }
+  100% { transform: translate(0%, 0); }
 }
 
 .bounceLeft {
@@ -355,6 +355,27 @@ progress {
     width: 80%;
     margin: 0 auto;
   }
+}
+
+.losingBabyLeft {
+  animation: dropLeft 1s;
+}
+
+@keyframes dropLeft {
+ 0% {
+   transform: rotate(180deg);
+   translate: -100px; 
+ }
+}
+
+.losingBabyRight {
+  animation: dropRight 1s;
+}
+
+@keyframes dropRight {
+ 0% {
+   transform: rotate(-180deg);
+ }
 }
 
 .hideBaby {

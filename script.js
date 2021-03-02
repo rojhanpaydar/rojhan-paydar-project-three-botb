@@ -249,18 +249,27 @@ let gameOverLose = function (results) {
     function() 
     {
       $(".displayCpu").addClass("jump");
-      $(".displayUser").addClass("hideBaby");
+      $(".displayUser").addClass("losingBabyLeft");
     }, 1400);
-  $(".fightResultsBox")
-    .append(
-      `<p>Oh no... you ${results}</p>
-        <button class="backToStart">PLAY AGAIN</button>
-        `
-    )
-    .fadeToggle();
-  $(".backToStart").on("click", function () {
-    location.reload();
-  });
+     setTimeout(
+    function() 
+    {
+      $(".displayUser").addClass("hideBaby");
+    }, 1800);
+    setTimeout(
+    function() 
+    {
+      $(".fightResultsBox")
+        .append(
+          `<p>Oh no... you ${results}</p>
+            <button class="backToStart">PLAY AGAIN</button>
+            `
+        )
+        .fadeToggle();
+      $(".backToStart").on("click", function () {
+        location.reload();
+      });
+    }, 2000);
 };
 // if user ties, hide the button to "start the fight", and reveal their results. User will have the choice to return to the main menu
 let gameOverTie = function (results) {
@@ -273,16 +282,20 @@ let gameOverTie = function (results) {
       $(".displayCpu").addClass("shook");
       $(".displayUser").addClass("shook");
     }, 1400);
-  $(".fightResultsBox")
-    .append(
-      `<p>You've met your match.. you ${results}</p> 
-            <button class="backToStart">PLAY AGAIN</button>
-        `
-    )
-    .fadeToggle();
-  $(".backToStart").on("click", function () {
-    location.reload();
-  });
+    setTimeout(
+    function() 
+    {
+      $(".fightResultsBox")
+        .append(
+          `<p>You've met your match.. you ${results}</p> 
+                <button class="backToStart">PLAY AGAIN</button>
+            `
+        )
+        .fadeToggle();
+      $(".backToStart").on("click", function () {
+        location.reload();
+      });
+    }, 2000);
 };
 // if user wins, hide the button to "start the fight", and reveal their results. User will have the choice to return to the main menu
 let gameOverWin = function (results) {
@@ -293,19 +306,30 @@ let gameOverWin = function (results) {
     function() 
     {
       $(".displayUser").addClass("jump");
-      $(".displayCpu").addClass("hideBaby")
+      $(".displayCpu").addClass("losingBabyRight")
     }, 1400);
 
-  $(".fightResultsBox")
-    .append(
-      `<p>You are the strongest baby... you ${results}</p> 
-            <button class="backToStart">PLAY AGAIN</button>
-        `
-    )
-    .fadeToggle();
-  $(".backToStart").on("click", function () {
-    location.reload();
-  });
+    setTimeout(
+    function() 
+    {
+      $(".displayCpu").addClass("hideBaby");
+    }, 1800);
+
+    setTimeout(
+    function() 
+    {
+      $(".fightResultsBox")
+        .append(
+          `<p>You are the strongest baby... you ${results}</p> 
+                <button class="backToStart">PLAY AGAIN</button>
+            `
+        )
+        .fadeToggle();
+      $(".backToStart").on("click", function () {
+        location.reload();
+      });
+    }, 2000);
+
 };
 
 // audio plays after user selects "start fight button"

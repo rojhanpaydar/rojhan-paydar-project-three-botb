@@ -505,12 +505,12 @@ li img {
             transform: translate(-120%, 0);
   }
   80% {
-    -webkit-transform: translate(40%, 0);
-            transform: translate(40%, 0);
+    -webkit-transform: translate(0%, 0);
+            transform: translate(0%, 0);
   }
   100% {
-    -webkit-transform: translate(30%, 0);
-            transform: translate(30%, 0);
+    -webkit-transform: translate(0%, 0);
+            transform: translate(0%, 0);
   }
 }
 
@@ -528,12 +528,12 @@ li img {
             transform: translate(-120%, 0);
   }
   80% {
-    -webkit-transform: translate(40%, 0);
-            transform: translate(40%, 0);
+    -webkit-transform: translate(0%, 0);
+            transform: translate(0%, 0);
   }
   100% {
-    -webkit-transform: translate(30%, 0);
-            transform: translate(30%, 0);
+    -webkit-transform: translate(0%, 0);
+            transform: translate(0%, 0);
   }
 }
 
@@ -563,12 +563,12 @@ li img {
             transform: translate(120%, 0);
   }
   80% {
-    -webkit-transform: translate(-40%, 0);
-            transform: translate(-40%, 0);
+    -webkit-transform: translate(0%, 0);
+            transform: translate(0%, 0);
   }
   100% {
-    -webkit-transform: translate(-30%, 0);
-            transform: translate(-30%, 0);
+    -webkit-transform: translate(0%, 0);
+            transform: translate(0%, 0);
   }
 }
 
@@ -586,12 +586,12 @@ li img {
             transform: translate(120%, 0);
   }
   80% {
-    -webkit-transform: translate(-40%, 0);
-            transform: translate(-40%, 0);
+    -webkit-transform: translate(0%, 0);
+            transform: translate(0%, 0);
   }
   100% {
-    -webkit-transform: translate(-30%, 0);
-            transform: translate(-30%, 0);
+    -webkit-transform: translate(0%, 0);
+            transform: translate(0%, 0);
   }
 }
 
@@ -994,6 +994,46 @@ progress {
 .fightResultsBox img {
   width: 80%;
   margin: 0 auto;
+}
+
+.losingBabyLeft {
+  -webkit-animation: dropLeft 1s;
+          animation: dropLeft 1s;
+}
+
+@-webkit-keyframes dropLeft {
+  0% {
+    -webkit-transform: rotate(180deg);
+            transform: rotate(180deg);
+    translate: -100px;
+  }
+}
+
+@keyframes dropLeft {
+  0% {
+    -webkit-transform: rotate(180deg);
+            transform: rotate(180deg);
+    translate: -100px;
+  }
+}
+
+.losingBabyRight {
+  -webkit-animation: dropRight 1s;
+          animation: dropRight 1s;
+}
+
+@-webkit-keyframes dropRight {
+  0% {
+    -webkit-transform: rotate(-180deg);
+            transform: rotate(-180deg);
+  }
+}
+
+@keyframes dropRight {
+  0% {
+    -webkit-transform: rotate(-180deg);
+            transform: rotate(-180deg);
+  }
 }
 
 .hideBaby {
