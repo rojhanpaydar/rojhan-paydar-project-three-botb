@@ -479,6 +479,21 @@ li img {
   width: 500px;
 }
 
+.playerOne,
+.playerTwo {
+  color: white;
+  position: absolute;
+  top: 15%;
+}
+
+.playerOne {
+  left: 10%;
+}
+
+.playerTwo {
+  right: 10%;
+}
+
 .hellaKickLeft {
   transform: translate(200%, 0);
   -webkit-transform: translate(200%, 0);
