@@ -337,10 +337,15 @@ const resultsAudio = document.getElementById("resultsAudio");
 
 $(document).ready(function () {
   $(".startFight").click(function () {
-    resultsAudio.play();
-    resultsAudio.volume = 0.1;
+    setTimeout(
+        function() 
+        {
+          resultsAudio.play();
+          resultsAudio.volume = 0.2;
+        }, 1000);
   });
 });
+
 
 // provides randomized images with the game results
 function getRandomImage() {
