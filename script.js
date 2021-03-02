@@ -197,44 +197,82 @@ $(".startFight").on("click", function () {
   let cpuHealth = document.getElementById("cpuHealth");
   if (userChoice === babyYoda) {
     if (cpuChoice === babySpongeBob) {
-      health.value -= 0;
-      cpuHealth.value -= 100;
+      setTimeout(
+        function() 
+        {
+          health.value -= 0;
+          cpuHealth.value -= 100;
+    }, 1000);
       gameOverWin("win!");
     } else if (cpuChoice === babyYoda) {
+      setTimeout(
+        function() 
+        {
       health.value -= 50;
       cpuHealth.value -= 50;
+    }, 1000);
       gameOverTie("tie!");
     } else {
+      setTimeout(
+        function() 
+        {
       health.value -= 100;
       cpuHealth.value -= 0;
+    }, 1000);
       gameOverLose("lose!");
     }
   } else if (userChoice === babySpongeBob) {
     if (cpuChoice === babySpongeBob) {
-      health.value -= 50;
-      cpuHealth.value -= 50;
+      setTimeout(
+      function() 
+      {
+        health.value -= 50;
+        cpuHealth.value -= 50;
+        
+      }, 1000);
       gameOverTie("tie!");
     } else if (cpuChoice === babyYoda) {
+        setTimeout(
+    function() 
+    {
       health.value -= 100;
       cpuHealth.value -= 0;
+    }, 1000);
       gameOverLose("lose!");
     } else {
+        setTimeout(
+    function() 
+    {
       health.value -= 0;
       cpuHealth.value -= 100;
+    }, 1000);
+      
       gameOverWin("win!");
     }
   } else if (userChoice === babyGroot) {
     if (cpuChoice === babyGroot) {
+       setTimeout(
+    function() 
+    {
       health.value -= 50;
       cpuHealth.value -= 50;
+    }, 1000);
       gameOverTie("tie!");
     } else if (cpuChoice === babyYoda) {
+      setTimeout(
+    function() 
+    {
       health.value -= 100;
       cpuHealth.value -= 0;
+    }, 1000);
       gameOverLose("lose!");
     } else {
+       setTimeout(
+    function() 
+    {
       health.value -= 0;
       cpuHealth.value -= 100;
+    }, 1000);
       gameOverWin("win!");
     }
   }
@@ -245,17 +283,20 @@ let gameOverLose = function (results) {
   $(".startFight").hide();
   $(".displayCpu").addClass("hellaKickLeft");
   $(".displayUser").addClass("hellaKickRight");
+  
   setTimeout(
     function() 
     {
       $(".displayCpu").addClass("jump");
       $(".displayUser").addClass("losingBabyLeft");
     }, 1400);
+
      setTimeout(
     function() 
     {
       $(".displayUser").addClass("hideBaby");
     }, 1800);
+
     setTimeout(
     function() 
     {
@@ -334,6 +375,8 @@ let gameOverWin = function (results) {
 
 // audio plays after user selects "start fight button"
 const resultsAudio = document.getElementById("resultsAudio");
+const giggle = document.getElementById("giggle");
+const cry = document.getElementById("cry");
 
 $(document).ready(function () {
   $(".startFight").click(function () {
@@ -343,6 +386,18 @@ $(document).ready(function () {
           resultsAudio.play();
           resultsAudio.volume = 0.2;
         }, 1000);
+        setTimeout(
+        function() 
+        {
+          cry.play();
+          cry.volume = 0.2;
+        }, 1000);
+        setTimeout(
+        function() 
+        {
+          giggle.play();
+          giggle.volume = 0.3;
+        }, 2000);
   });
 });
 

@@ -364,7 +364,7 @@ progress {
 @keyframes dropLeft {
  0% {
    transform: rotate(180deg);
-   translate: -100px; 
+   transform: (translate -100px); 
  }
 }
 

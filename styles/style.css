@@ -1005,7 +1005,8 @@ progress {
   0% {
     -webkit-transform: rotate(180deg);
             transform: rotate(180deg);
-    translate: -100px;
+    -webkit-transform: translate -100px;
+            transform: translate -100px;
   }
 }
 
@@ -1013,7 +1014,8 @@ progress {
   0% {
     -webkit-transform: rotate(180deg);
             transform: rotate(180deg);
-    translate: -100px;
+    -webkit-transform: translate -100px;
+            transform: translate -100px;
   }
 }
 
