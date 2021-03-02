@@ -248,7 +248,7 @@ let gameOverLose = function (results) {
   setTimeout(
     function() 
     {
-      $(".displayCpu").addClass("shook");
+      $(".displayCpu").addClass("jump");
       $(".displayUser").addClass("hideBaby");
     }, 1400);
   $(".fightResultsBox")
@@ -292,7 +292,7 @@ let gameOverWin = function (results) {
   setTimeout(
     function() 
     {
-      $(".displayUser").addClass("shook");
+      $(".displayUser").addClass("jump");
       $(".displayCpu").addClass("hideBaby")
     }, 1400);
 

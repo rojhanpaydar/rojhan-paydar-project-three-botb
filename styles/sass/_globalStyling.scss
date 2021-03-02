@@ -195,7 +195,7 @@ li {
 @keyframes KickLeft {
   0% { transform: translate(0%, 0);}
   20% { transform: translate(10%, 0); }
-  70% { transform: translate(-20%, 0) ; }
+  70% { transform: translate(-120%, 0) ; }
   80% { transform: translate(40%, 0); }
   100% { transform: translate(30%, 0); }
 }
@@ -212,7 +212,7 @@ li {
 @keyframes KickRight {
   0% { transform: translate(0%, 0);}
   20% { transform: translate(-10%, 0); }
-  70% { transform: translate(20%, 0) ; }
+  70% { transform: translate(120%, 0) ; }
   80% { transform: translate(-40%, 0); }
   100% { transform: translate(-30%, 0); }
 }
@@ -224,9 +224,9 @@ li {
 
 @keyframes bounceLeft {
   0% { transform: translate(0%, 0);}
-  20% { transform: translate(50%, 0); }
-  70% { transform: translate(180%, 0) ; }
-  80% { transform: translate(10%, 0); }
+  20% { transform: translate(50%, 0); transform: rotate(25deg);}
+  70% { transform: translate(120%, 0); }
+  80% { transform: translate(10%, 0); transform: rotate(-90deg); }
   100% { transform: translate(0%, 0); }
 }
 
@@ -234,23 +234,19 @@ li {
   animation: bounceRight 1.4s;
 }
 
-
 @keyframes bounceRight {
   0% { transform: translate(0%, 0);}
-  20% { transform: translate(-50%, 0); }
-  70% { transform: translate(-180%, 0) ; }
-  80% { transform: translate(-10%, 0); }
+  20% { transform: translate(-50%, 0); transform: rotate(-25deg);}
+  70% { transform: translate(-120%, 0); }
+  80% { transform: translate(-10%, 0); transform: rotate(90deg);  }
   100% { transform: translate(0%, 0); }
 }
-
-
-
 
 .displayUser {
   width: 20%;
   position: absolute;
   bottom: 10%;
-  left: 35px;
+  left: 45px;
 }
 
 .shook{
@@ -272,10 +268,47 @@ li {
   100% { transform: translate(1px, -2px) rotate(-1deg); }
 }
 
+.jump {
+  animation: jump 0.5s;
+  animation-iteration-count: infinite;
+  animation-direction: reverse;
+}
+
+@keyframes jump {
+ 0% {
+   transform: translateY(0px);
+ }
+ 20% {
+   transform: translateY(5px);
+ }
+ 40% {
+   transform: translateY(10px);
+ }
+ 50% {
+   transform: translateY(20px);
+ }
+ 60% {
+   transform: translateY(40px);
+ }
+ 70% {
+   transform: translateY(20px);
+ }
+ 80% {
+   transform: translateY(10px);
+ }
+ 90% {
+   transform: translateY(5px);
+ }
+ 100% {
+   transform: translateY(0px);
+ }
+}
+
+
 .displayCpu {
   width: 20%;
   position: absolute;
-  right: 35px;
+  right: 45px;
   bottom: 10%;
 }
 
