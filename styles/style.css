@@ -929,53 +929,6 @@ li img {
   bottom: 10%;
 }
 
-@keyframes shake {
-  0% {
-    -webkit-transform: translate(1px, 1px) rotate(0deg);
-            transform: translate(1px, 1px) rotate(0deg);
-  }
-  10% {
-    -webkit-transform: translate(-1px, -2px) rotate(-1deg);
-            transform: translate(-1px, -2px) rotate(-1deg);
-  }
-  20% {
-    -webkit-transform: translate(-3px, 0px) rotate(1deg);
-            transform: translate(-3px, 0px) rotate(1deg);
-  }
-  30% {
-    -webkit-transform: translate(3px, 2px) rotate(0deg);
-            transform: translate(3px, 2px) rotate(0deg);
-  }
-  40% {
-    -webkit-transform: translate(1px, -1px) rotate(1deg);
-            transform: translate(1px, -1px) rotate(1deg);
-  }
-  50% {
-    -webkit-transform: translate(-1px, 2px) rotate(-1deg);
-            transform: translate(-1px, 2px) rotate(-1deg);
-  }
-  60% {
-    -webkit-transform: translate(-3px, 1px) rotate(0deg);
-            transform: translate(-3px, 1px) rotate(0deg);
-  }
-  70% {
-    -webkit-transform: translate(3px, 1px) rotate(-1deg);
-            transform: translate(3px, 1px) rotate(-1deg);
-  }
-  80% {
-    -webkit-transform: translate(-1px, -1px) rotate(1deg);
-            transform: translate(-1px, -1px) rotate(1deg);
-  }
-  90% {
-    -webkit-transform: translate(1px, 2px) rotate(0deg);
-            transform: translate(1px, 2px) rotate(0deg);
-  }
-  100% {
-    -webkit-transform: translate(1px, -2px) rotate(-1deg);
-            transform: translate(1px, -2px) rotate(-1deg);
-  }
-}
-
 .coin {
   position: absolute;
   right: 0;
@@ -1014,23 +967,36 @@ progress {
 .losingBabyLeft {
   -webkit-animation: dropLeft 1s;
           animation: dropLeft 1s;
+  animation-direction: alternate-reverse;
 }
 
 @-webkit-keyframes dropLeft {
   0% {
-    -webkit-transform: rotate(180deg);
-            transform: rotate(180deg);
-    -webkit-transform: translate -100px;
-            transform: translate -100px;
+    -webkit-transform: translateY(300px);
+            transform: translateY(300px);
+  }
+  50% {
+    -webkit-transform: translateY(400px);
+            transform: translateY(400px);
+  }
+  100% {
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
   }
 }
 
 @keyframes dropLeft {
   0% {
-    -webkit-transform: rotate(180deg);
-            transform: rotate(180deg);
-    -webkit-transform: translate -100px;
-            transform: translate -100px;
+    -webkit-transform: translateY(300px);
+            transform: translateY(300px);
+  }
+  50% {
+    -webkit-transform: translateY(400px);
+            transform: translateY(400px);
+  }
+  100% {
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
   }
 }
 

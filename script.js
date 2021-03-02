@@ -354,7 +354,7 @@ let gameOverWin = function (results) {
     function() 
     {
       $(".displayCpu").addClass("hideBaby");
-    }, 1800);
+    }, 1600);
 
     setTimeout(
     function() 
