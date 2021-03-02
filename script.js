@@ -249,6 +249,7 @@ let gameOverLose = function (results) {
     function() 
     {
       $(".displayCpu").addClass("shook");
+      $(".displayUser").addClass("hideBaby");
     }, 1400);
   $(".fightResultsBox")
     .append(
@@ -292,6 +293,7 @@ let gameOverWin = function (results) {
     function() 
     {
       $(".displayUser").addClass("shook");
+      $(".displayCpu").addClass("hideBaby")
     }, 1400);
 
   $(".fightResultsBox")

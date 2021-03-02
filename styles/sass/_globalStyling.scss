@@ -250,7 +250,7 @@ li {
   width: 20%;
   position: absolute;
   bottom: 10%;
-  left: 0;
+  left: 35px;
 }
 
 .shook{
@@ -275,7 +275,7 @@ li {
 .displayCpu {
   width: 20%;
   position: absolute;
-  right: 0;
+  right: 35px;
   bottom: 10%;
 }
 
@@ -322,6 +322,10 @@ progress {
     width: 80%;
     margin: 0 auto;
   }
+}
+
+.hideBaby {
+  display: none;
 }
 
 // added footer for credits
